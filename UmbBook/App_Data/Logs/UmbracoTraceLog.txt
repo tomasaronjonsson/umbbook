@@ -2032,3 +2032,59 @@ System.Web.HttpCompileException (0x80004005): e:\Taj\Code\UmbBook\UmbBook\Views\
 2015-09-08 13:28:40,143 [33] INFO  umbraco.BusinessLogic.Log - [P4732/T44/D10] Log scrubbed.  Removed all items older than 2015-07-10 13:28:40
 2015-09-08 13:29:15,848 [33] WARN  Umbraco.Web.Mvc.RenderMvcController - [P4732/T44/D10] No physical template file was found for template Homepage
 2015-09-08 13:29:17,615 [33] WARN  Umbraco.Web.Mvc.RenderMvcController - [P4732/T44/D10] No physical template file was found for template Homepage
+2015-09-08 13:38:13,728 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledPublishing] Terminating
+2015-09-08 13:38:13,728 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledPublishing] Waiting for tasks to complete
+2015-09-08 13:38:13,731 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledPublishing] Tasks completed, terminated
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [LogScrubber] Terminating
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [LogScrubber] Waiting for tasks to complete
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [KeepAlive] Terminating
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [KeepAlive] Waiting for tasks to complete
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledTasks] Terminating
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledTasks] Waiting for tasks to complete
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [KeepAlive] Tasks completed, terminated
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [ScheduledTasks] Tasks completed, terminated
+2015-09-08 13:38:13,794 [33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T44/D10] [LogScrubber] Tasks completed, terminated
+2015-09-08 13:38:43,859 [33] INFO  Umbraco.Core.UmbracoApplicationBase - [P4732/T44/D10] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-09-08 13:41:11,313 [103] INFO  Umbraco.Core.CoreBootManager - [P4732/T85/D11] Umbraco 7.2.8 application starting on MW1008
+2015-09-08 13:41:11,349 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Determining hash of code files on disk
+2015-09-08 13:41:11,358 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Hash determined (took 7ms)
+2015-09-08 13:41:11,367 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-09-08 13:41:11,684 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 42 (took 315ms)
+2015-09-08 13:41:11,744 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-09-08 13:41:11,752 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+2015-09-08 13:41:11,752 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-09-08 13:41:11,761 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 8ms)
+2015-09-08 13:41:11,772 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-09-08 13:41:11,786 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 14 (took 13ms)
+2015-09-08 13:41:11,786 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-09-08 13:41:11,802 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 48 (took 16ms)
+2015-09-08 13:41:11,832 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-09-08 13:41:11,839 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 7ms)
+2015-09-08 13:41:11,839 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-09-08 13:41:11,848 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 8ms)
+2015-09-08 13:41:12,423 [103] INFO  Umbraco.Core.DatabaseContext - [P4732/T85/D11] CanConnect = True
+2015-09-08 13:41:12,430 [103] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - [P4732/T85/D11] Initializing Umbraco internal event handlers for cache refreshing
+2015-09-08 13:41:12,447 [103] INFO  Umbraco.Web.Search.ExamineEvents - [P4732/T85/D11] Initializing Examine and binding to business logic events
+2015-09-08 13:41:12,489 [103] INFO  Umbraco.Web.Search.ExamineEvents - [P4732/T85/D11] Adding examine event handlers for index providers: 3
+2015-09-08 13:41:12,599 [103] INFO  Umbraco.Core.CoreBootManager - [P4732/T85/D11] Umbraco application startup complete (took 1270ms)
+2015-09-08 13:41:12,844 [103] INFO  Umbraco.Core.ApplicationContext - [P4732/T85/D11] ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+2015-09-08 13:41:12,888 [103] INFO  umbraco.content - [P4732/T85/D11] Load Xml from file...
+2015-09-08 13:41:12,890 [103] INFO  umbraco.content - [P4732/T85/D11] Loaded Xml from file.
+2015-09-08 13:41:12,995 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-09-08 13:41:13,006 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 9ms)
+2015-09-08 13:41:13,437 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-09-08 13:41:13,455 [103] INFO  Umbraco.Core.PluginManager - [P4732/T85/D11] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 17ms)
+2015-09-08 13:41:13,943 [103] WARN  Umbraco.Web.Mvc.RenderMvcController - [P4732/T85/D11] No physical template file was found for template Homepage
+2015-09-08 13:41:43,962 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledTasks] Terminating (immediate)
+2015-09-08 13:41:43,962 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledTasks] Cancelling tasks
+2015-09-08 13:41:44,064 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledTasks] Tasks cancelled, terminated
+2015-09-08 13:41:44,064 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [LogScrubber] Terminating (immediate)
+2015-09-08 13:41:44,064 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [LogScrubber] Cancelling tasks
+2015-09-08 13:41:44,165 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [LogScrubber] Tasks cancelled, terminated
+2015-09-08 13:41:44,165 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledPublishing] Terminating (immediate)
+2015-09-08 13:41:44,165 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledPublishing] Cancelling tasks
+2015-09-08 13:41:44,266 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [ScheduledPublishing] Tasks cancelled, terminated
+2015-09-08 13:41:44,266 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [KeepAlive] Terminating (immediate)
+2015-09-08 13:41:44,266 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [KeepAlive] Cancelling tasks
+2015-09-08 13:41:44,367 [103] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4732/T85/D11] [KeepAlive] Tasks cancelled, terminated
+2015-09-08 13:41:44,368 [103] INFO  Umbraco.Core.UmbracoApplicationBase - [P4732/T85/D11] Application shutdown. Reason: BinDirChangeOrDirectoryRename

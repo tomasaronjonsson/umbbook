@@ -391,7 +391,6 @@
     <Compile Include="Controllers\FeedPostSurfaceController.cs" />
     <Compile Include="Controllers\MembersWallController.cs" />
     <Compile Include="Controllers\ProfilePictureSurfaceController.cs" />
-    <Compile Include="Helpers\MemberHelper.cs" />
     <Compile Include="Interfaces\IAcceptedFriendsFeed.cs" />
     <Compile Include="Models\CommentPostModel.cs" />
     <Compile Include="Models\CommentsListModel.cs" />

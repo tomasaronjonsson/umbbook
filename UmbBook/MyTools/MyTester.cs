@@ -13,7 +13,7 @@ namespace UmbBook.MyTools
 {
     [TestFixture]
     [DatabaseTestBehavior(DatabaseBehavior.NoDatabasePerFixture)]
-    public class MyTester : BaseUmbracoApplicationTest
+    public class MyTester : BaseRoutingTest
     {
 
         private UmbracoContext umbracoContext;
@@ -21,7 +21,7 @@ namespace UmbBook.MyTools
         [SetUp]
         public void SetUp()
         {
-           // this.umbracoContext = GetRoutingContext("/").UmbracoContext;
+           this.umbracoContext = GetRoutingContext("/").UmbracoContext;
         }
 
 
