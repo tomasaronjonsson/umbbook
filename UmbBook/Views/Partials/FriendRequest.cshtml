@@ -1,0 +1,14 @@
+﻿@model UmbBook.Models.FriendRequestModel
+
+@if (User.Identity.IsAuthenticated)
+{
+    /*request as friend*/
+    using (Html.BeginUmbracoForm("RequestFriend", "FriendRequestSurface"))
+    {
+       
+        <input  value="Request Friendship" type="submit" />
+    }     
+    
+    <p>@TempData["Status"]</p> 
+    
+}

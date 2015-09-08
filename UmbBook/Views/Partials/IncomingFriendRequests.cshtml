@@ -1,0 +1,12 @@
+﻿@model UmbBook.Models.FriendRequestsViewModel
+<h2>Pending Friend Requests:</h2>
+
+@foreach (var item in Model.friendRequests)
+{
+    <p>
+        @item.Name
+        @Html.ActionLink("AcceptFriend","AcceptFriend", "FriendRequestSurface", new { userId = item.Id }, null)
+
+    </p>
+
+}

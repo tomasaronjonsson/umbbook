@@ -1,0 +1,10 @@
+﻿@model UmbBook.Models.CommentPostModel
+@using (Html.BeginUmbracoForm("CommentPost", "CommentSurface"))
+{
+    @Html.EditorForModel()
+
+    <br />
+    <input type="submit" />
+
+    <p>@TempData["Status"]</p>
+}

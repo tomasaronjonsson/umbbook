@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+@using (Html.BeginUmbracoForm("ProfileImagePost", "ProfilePictureSurface"))
+{
+    
+    <input type="file" id="profileImage" name="profileImage" />
+    <br />
+    <input type="submit" />
+
+    <p>@TempData["Status"]</p>
+}

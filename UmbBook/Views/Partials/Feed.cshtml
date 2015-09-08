@@ -1,0 +1,11 @@
+﻿@model UmbBook.Models.FeedViewModel
+
+<div>
+    <a href="/members-wall/?id=@Model.author.Id">@Model.author.Name</a><br />
+    <p>
+        @Model.feed.GetPropertyValue("feedContent")
+    </p>
+     @Html.Action("RenderComments", "CommentSurface", new { feedToViewCommentsFrom = Model.feed.Id })
+    
+</div>
+<hr />

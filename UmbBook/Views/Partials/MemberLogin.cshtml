@@ -1,0 +1,24 @@
+﻿@model UmbBook.Models.MemberLoginModel
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Logged in: @User.Identity.Name
+    @Html.ActionLink("Log out", "MemberLogout", "MemberLoginSurface")</p>
+}
+else
+{
+    using (Html.BeginUmbracoForm("MemberLogin", "MemberLoginSurface"))
+    {
+        <h2>Login</h2>
+        @Html.EditorForModel()
+        <br />
+        <input  type="submit" />
+    }     
+    
+    <p>@TempData["Status"]</p> 
+    <hr />
+    <strong>or</strong>
+    
+     @Html.Partial("MemberRegister", new UmbBook.Models.MemberRegisterModel())    
+    
+    
+}   

@@ -1,0 +1,14 @@
+{
+  "id": "8ffcba42-443e-4e64-a20b-e5e1c6ac8055",
+  "name": "Send email to taj@mediaworkers.dk when submitted",
+  "form": "e478cb9e-e76a-45be-8a1b-bc2af29ba07a",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "taj@mediaworkers.dk",
+    "Subject": "the form  was submitted",
+    "Message": "the form  was submitted, this is the list of values it contained, you can turn this email off under workflows in Umbraco Contour"
+  },
+  "sortOrder": 0
+}

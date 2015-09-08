@@ -1,0 +1,14 @@
+﻿@model UmbBook.Models.MemberRegisterModel
+
+@using (Html.BeginUmbracoForm("MemberRegister", "MemberRegisterSurface"))
+    {
+        <h2>Register:</h2>
+        @Html.EditorForModel()
+
+        <br />
+        <input type="submit"/>
+    
+        <p>@TempData["Status"]</p> 
+
+    }
+

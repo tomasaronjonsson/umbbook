@@ -1,0 +1,8 @@
+﻿@model UmbBook.Models.FeedsListModel
+
+<h3>Feed:</h3>
+<hr />
+@foreach (var item in Model.feeds)
+{
+    @Html.Partial("Feed",item)
+}

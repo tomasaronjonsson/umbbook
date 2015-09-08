@@ -1,0 +1,9 @@
+﻿@model UmbBook.Models.CommentViewModel
+
+<div>
+    <a href="/members-wall/?id=@Model.author.Id">@Model.author.Name</a><br />
+    <p>
+        @Model.commentContent.GetPropertyValue("commentContent")
+    </p>
+</div>
+<hr />
