@@ -15,7 +15,7 @@ using Umbraco.Web;
 namespace UmbBook.MyTools
 {
     /// <summary>
-    /// Can I do this? 
+    /// 
     /// </summary>
     public class MyHelper
     {

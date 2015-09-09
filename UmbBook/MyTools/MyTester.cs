@@ -6,24 +6,15 @@ using UmbBook.Controllers;
 using Umbraco.Web;
 
 //for testing
+using Umbraco.Tests;
 using Umbraco.Tests.TestHelpers;
 using NUnit.Framework;
 
 namespace UmbBook.MyTools
 {
     [TestFixture]
-    [DatabaseTestBehavior(DatabaseBehavior.NoDatabasePerFixture)]
-    public class MyTester : BaseRoutingTest
+    public class MyTester 
     {
-
-        private UmbracoContext umbracoContext;
-
-        [SetUp]
-        public void SetUp()
-        {
-           this.umbracoContext = GetRoutingContext("/").UmbracoContext;
-        }
-
 
 
         [Test]
@@ -37,19 +28,6 @@ namespace UmbBook.MyTools
         public void FailingTest()
         {
             Assert.AreEqual(5, 2);
-        }
-
-        /// <summary>
-        /// Testing MyHelper
-        /// </summary>
-        [Test]
-        public void TestingMyHelper()
-        {
-            //createa a controller to test
-            FeedListSurfaceController controllerToTest = new FeedListSurfaceController();
-
-            //testing if he returns a value that is not null
-            Assert.NotNull(controllerToTest.RenderFeedListAll());
         }
 
     }

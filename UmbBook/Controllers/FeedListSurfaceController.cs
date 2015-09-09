@@ -14,7 +14,7 @@ namespace UmbBook.Controllers
 {
     public class FeedListSurfaceController : SurfaceController
     {
-        
+   
         /// <summary>
         /// Method to get a feed by a user name, used to view members wall or own feed use RenderFeedListAll to get all for the feed list 
         /// </summary>
