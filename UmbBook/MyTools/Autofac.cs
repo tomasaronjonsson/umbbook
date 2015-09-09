@@ -14,7 +14,7 @@ using Umbraco.Web;
 using Autofac.Integration;
 using Autofac.Integration.WebApi;
 
-namespace UmbBook.Autofac
+namespace UmbBook.MyTools
 {
     public class Autofac : ApplicationEventHandler
     {

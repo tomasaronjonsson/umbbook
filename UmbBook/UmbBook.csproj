@@ -388,7 +388,7 @@
     <Compile Include="Models\SearchResultModel.cs" />
     <Compile Include="Models\SearchPageModel.cs" />
     <Compile Include="MyTools\MyTester.cs" />
-    <Compile Include="Testing\Autofac.cs" />
+    <Compile Include="MyTools\Autofac.cs" />
     <Compile Include="Controllers\AcceptedFriendsFeedSurfaceController.cs" />
     <Compile Include="Controllers\CommentSurfaceController.cs" />
     <Compile Include="Controllers\FeedListSurfaceController.cs" />
@@ -427,6 +427,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Testing\" />
     <Folder Include="Views\Search\" />
   </ItemGroup>
   <PropertyGroup>

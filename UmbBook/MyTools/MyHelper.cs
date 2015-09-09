@@ -124,6 +124,7 @@ namespace UmbBook.MyTools
                 }
 
             }
+            listOfAllFeeds.feeds = listOfAllFeeds.feeds.OrderByDescending(x => x.feed.CreateDate).ToList();
 
             return listOfAllFeeds;
 
