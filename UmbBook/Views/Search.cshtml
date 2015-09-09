@@ -1,15 +1,19 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.SearchResultsModel>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.SearchPageModel>
 @{
     Layout = "Master.cshtml";
 }
 <div id="main-container">
     <div id="main" class="wrapper clearfix">
+
+
+
+
         <section>
             @if (Model.Results.Count > 0)
             {
                 foreach (var item in Model.Results)
                 {
-                    <p>@item</p>
+                    @Html.Partial("SearchResult",item)
 
                 }
             }

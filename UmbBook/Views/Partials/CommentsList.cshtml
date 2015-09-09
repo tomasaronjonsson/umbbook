@@ -3,9 +3,9 @@
 @using System.Web.Mvc.Html;
 <h3>Comments:</h3>
 <hr />
-@if (Model.comments.count > 0)
+@if (Model.comments.Count > 0)
 {
-    @foreach (var item in Model.comments)
+    foreach (var item in Model.comments)
     {
         @Html.Partial("Comment", item)
     }

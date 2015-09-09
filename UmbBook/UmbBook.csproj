@@ -339,7 +339,6 @@
     <Content Include="Views\Partials\FeedPost.cshtml" />
     <Content Include="Views\MacroPartials\listFeed.cshtml" />
     <Content Include="Views\membersWall.cshtml" />
-    <Content Include="Views\SearchMember.cshtml" />
     <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
     <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
     <Content Include="Models\Generated\Database.tt">
@@ -355,6 +354,8 @@
     <Content Include="Views\Partials\CommentsList.cshtml" />
     <Content Include="Views\Partials\CommentPost.cshtml" />
     <Content Include="Views\Partials\ProfileImagePost.cshtml" />
+    <Content Include="Views\Search.cshtml" />
+    <Content Include="Views\Partials\SearchResult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -380,6 +381,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Models\SearchResultModel.cs" />
+    <Compile Include="Models\SearchPageModel.cs" />
     <Compile Include="MyTools\MyTester.cs" />
     <Compile Include="Testing\TestingAutofac.cs" />
     <Compile Include="Controllers\AcceptedFriendsFeedSurfaceController.cs" />
@@ -419,7 +423,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Search\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

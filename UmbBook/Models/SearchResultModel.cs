@@ -10,5 +10,6 @@ namespace UmbBook.Models
 
         public string Url { get; set; }
         public string Name { get; set; }
+        public string TypedAlias { get; set; }
     }
 }

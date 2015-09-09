@@ -158,3 +158,43 @@ Found 0 .lic file(s):
 Could not validate license:
 
 Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all
+Looking for *.lic in E:\Taj\Code\UmbBook\UmbBook\bin
+Found 0 .lic file(s):
+Could not validate license:
+
+Your license has been approved for the following IPs/Domains: - This license is *not* associated with any ips or domains at all

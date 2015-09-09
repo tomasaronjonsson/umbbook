@@ -1,1 +1,8 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@Model UmbBook.Models.SearchResult
+
+<div>
+
+    <p><a href="@Model.Url">@Model.Name</a></p> 
+    Type: @Model.TypedAlias
+    <hr />
+</div>
