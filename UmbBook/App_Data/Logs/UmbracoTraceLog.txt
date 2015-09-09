@@ -3903,3 +3903,4 @@ System.InvalidOperationException: The model item passed into the dictionary is o
 2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [KeepAlive] Tasks completed, terminated
 2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledTasks] Tasks completed, terminated
 2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledPublishing] Tasks completed, terminated
+2015-09-09 13:22:09,799 [39] INFO  Umbraco.Core.UmbracoApplicationBase - [P7508/T1/D5] Application shutdown. Reason: BinDirChangeOrDirectoryRename
