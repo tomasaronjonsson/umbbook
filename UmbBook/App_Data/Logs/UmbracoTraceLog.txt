@@ -3889,3 +3889,17 @@ System.InvalidOperationException: The model item passed into the dictionary is o
 2015-09-09 13:10:23,080 [39] INFO  Umbraco.Core.PluginManager - [P7508/T1/D5] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 8ms)
 2015-09-09 13:10:23,434 [39] INFO  Umbraco.Core.PluginManager - [P7508/T1/D5] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
 2015-09-09 13:10:23,449 [39] INFO  Umbraco.Core.PluginManager - [P7508/T1/D5] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 14ms)
+2015-09-09 13:10:48,148 [27] INFO  Umbraco.Core.UmbracoApplicationBase - [P7508/T1/D4] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-09-09 13:11:29,045 [39] INFO  umbraco.BusinessLogic.Log - [P7508/T1/D5] Log scrubbed.  Removed all items older than 2015-07-11 13:11:29
+2015-09-09 13:21:39,658 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [LogScrubber] Terminating
+2015-09-09 13:21:39,658 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [LogScrubber] Waiting for tasks to complete
+2015-09-09 13:21:39,661 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [LogScrubber] Tasks completed, terminated
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [KeepAlive] Terminating
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [KeepAlive] Waiting for tasks to complete
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledTasks] Terminating
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledTasks] Waiting for tasks to complete
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledPublishing] Terminating
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledPublishing] Waiting for tasks to complete
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [KeepAlive] Tasks completed, terminated
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledTasks] Tasks completed, terminated
+2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledPublishing] Tasks completed, terminated
