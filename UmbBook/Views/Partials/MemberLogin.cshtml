@@ -1,4 +1,8 @@
-﻿@model UmbBook.Models.MemberLoginModel
+﻿@using Umbraco.Web
+@using Umbraco.Web.Macros
+@using Umbraco.Web.Mvc
+
+@model UmbBook.Models.MemberLoginModel
 @if (User.Identity.IsAuthenticated)
 {
     <p>Logged in: @User.Identity.Name

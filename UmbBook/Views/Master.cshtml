@@ -1,4 +1,10 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+﻿@using Umbraco.Web
+@using Umbraco.Web.Macros
+@using Umbraco.Web.Mvc
+@using System.Web.Mvc.Html
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
 @{
     Layout = null;
 }
@@ -35,6 +41,7 @@
     <div id="footer-container">
         <footer class="wrapper">
             <h3>@Umbraco.Field("homePageFooter", recursive: true)</h3>
+            @Html.Partial("memberLogin",new UmbBook.Models.MemberLoginModel())
         </footer>
     </div>
 </body>
