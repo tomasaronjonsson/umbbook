@@ -1,9 +1,15 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@using System.Web.Mvc.Html;
+
 @{
     Layout = "Master.cshtml";
 }
 <div id="main-container">
     <div id="main" class="wrapper clearfix">
-        @
+        @Umbraco.Field("homePageContent")
+
+        @Html.Action("RenderFeedListAll", "FeedListSurface")
+
     </div> <!-- #main -->
 </div> <!-- #main-container -->

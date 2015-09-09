@@ -1,11 +1,20 @@
 ﻿@model UmbBook.Models.CommentsListModel
 
+@using System.Web.Mvc.Html;
 <h3>Comments:</h3>
 <hr />
-@foreach (var item in Model.comments)
+@if (Model.comments.count > 0)
 {
-    @Html.Partial("Comment", item)
+    @foreach (var item in Model.comments)
+    {
+        @Html.Partial("Comment", item)
+    }
 }
+else
+{
+    <p>No Comments yet.</p>
+}
+
 <hr />
 <h3>Post a comment:</h3>
 @Html.Partial("CommentPost", new UmbBook.Models.CommentPostModel(Model.feedToViewCommentsFrom))
