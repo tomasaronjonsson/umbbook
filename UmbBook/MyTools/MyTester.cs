@@ -1,56 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using UmbBook.Controllers;
-using Umbraco.Web;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Web;
+//using UmbBook.Controllers;
+//using Umbraco.Web;
 
-//for testing
-using Umbraco.Tests.TestHelpers;
-using NUnit.Framework;
+////for testing
+//using Umbraco.Tests.TestHelpers;
 
-namespace UmbBook.MyTools
-{
-    [TestFixture]
-    [DatabaseTestBehavior(DatabaseBehavior.NoDatabasePerFixture)]
-    public class MyTester : BaseRoutingTest
-    {
+//namespace UmbBook.MyTools
+//{
+//    [DatabaseTestBehavior(DatabaseBehavior.NoDatabasePerFixture)]
+//    public class MyTester : BaseRoutingTest
+//    {
 
-        private UmbracoContext umbracoContext;
+//        private UmbracoContext umbracoContext;
 
-        [SetUp]
-        public void SetUp()
-        {
-           this.umbracoContext = GetRoutingContext("/").UmbracoContext;
-        }
+//        public void SetUp()
+//        {
+//           this.umbracoContext = GetRoutingContext("/").UmbracoContext;
+//        }
 
 
 
-        [Test]
-        public void PassingTest()
-        {
+//        public void PassingTest()
+//        {
 
-            Assert.AreEqual(4, 4);
-        }
+//            Assert.AreEqual(4, 4);
+//        }
 
-        [Test]
-        public void FailingTest()
-        {
-            Assert.AreEqual(5, 2);
-        }
+//        [Test]
+//        public void FailingTest()
+//        {
+//            Assert.AreEqual(5, 2);
+//        }
 
-        /// <summary>
-        /// Testing MyHelper
-        /// </summary>
-        [Test]
-        public void TestingMyHelper()
-        {
-            //createa a controller to test
-            FeedListSurfaceController controllerToTest = new FeedListSurfaceController();
+//        /// <summary>
+//        /// Testing MyHelper
+//        /// </summary>
+//        [Test]
+//        public void TestingMyHelper()
+//        {
+//            //createa a controller to test
+//            FeedListSurfaceController controllerToTest = new FeedListSurfaceController();
 
-            //testing if he returns a value that is not null
-            Assert.NotNull(controllerToTest.RenderFeedListAll());
-        }
+//            //testing if he returns a value that is not null
+//            Assert.NotNull(controllerToTest.RenderFeedListAll());
+//        }
 
-    }
-}
+//    }
+//}
