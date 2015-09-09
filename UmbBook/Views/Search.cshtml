@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.SearchResultsModel>
+@{
+    Layout = "Master.cshtml";
+}
+
+@if (Model.Results.Count > 0)
+{
+    foreach (var item in Model.Results)
+	{
+        <p>@item</p>
+
+}
+}
+else
+{
+    <p>No results found.</p>
+}
