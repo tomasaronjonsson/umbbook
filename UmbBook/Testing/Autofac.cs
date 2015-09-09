@@ -16,7 +16,7 @@ using Autofac.Integration.WebApi;
 
 namespace UmbBook.Autofac
 {
-    public class TestingAutofac : ApplicationEventHandler
+    public class Autofac : ApplicationEventHandler
     {
 
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)

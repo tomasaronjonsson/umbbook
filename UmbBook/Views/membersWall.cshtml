@@ -23,12 +23,24 @@
                     @Html.Partial("FriendRequest", new UmbBook.Models.FriendRequestModel())
                 }
             </header>
-            <section></section>
+            
             <section>
-                <h2>Feed</h2>
-                @Html.Action("RenderFeedListAll", "FeedListSurface")
+        
+                @Html.Action("RenderFeedListByUserId", "FeedListSurface", new { userIdToView = Model.owner.Id })
+
             </section>
+            @if (Model.isThisHisOwnWall)
+            {
+                <section>
+                    @Html.Action("RenderFriendRequests", "FriendRequestSurface")
+                </section>
+                
+                <section>
+                    @Html.Action("RenderAcceptedFriends", "FriendRequestSurface")
+                </section>
+            }
         </article>
+
 
 
     </div> <!-- #main -->

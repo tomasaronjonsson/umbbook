@@ -3621,3 +3621,46 @@ System.InvalidOperationException: The model item passed into the dictionary is o
 2015-09-09 12:41:28,830 [30] INFO  Umbraco.Core.Publishing.PublishingStrategy - [P4868/T1/D3] Content 'feed' with Id '0' has been published.
 2015-09-09 12:41:32,950 [30] INFO  umbraco.content - [P4868/T1/D3] Save Xml to file...
 2015-09-09 12:41:32,961 [30] INFO  umbraco.content - [P4868/T1/D3] Saved Xml to file.
+2015-09-09 12:42:41,761 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledPublishing] Terminating
+2015-09-09 12:42:41,761 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledPublishing] Waiting for tasks to complete
+2015-09-09 12:42:41,761 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [KeepAlive] Terminating
+2015-09-09 12:42:41,761 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [KeepAlive] Waiting for tasks to complete
+2015-09-09 12:42:41,761 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledPublishing] Tasks completed, terminated
+2015-09-09 12:42:41,762 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [KeepAlive] Tasks completed, terminated
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [LogScrubber] Terminating
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [LogScrubber] Waiting for tasks to complete
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledTasks] Terminating
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledTasks] Waiting for tasks to complete
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [LogScrubber] Tasks completed, terminated
+2015-09-09 12:42:41,770 [30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P4868/T1/D3] [ScheduledTasks] Tasks completed, terminated
+2015-09-09 12:43:11,866 [30] INFO  Umbraco.Core.UmbracoApplicationBase - [P4868/T1/D3] Application shutdown. Reason: ConfigurationChange
+2015-09-09 12:43:33,347 [23] INFO  Umbraco.Core.CoreBootManager - [P4868/T37/D4] Umbraco 7.2.8 application starting on MW1008
+2015-09-09 12:43:33,380 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Determining hash of code files on disk
+2015-09-09 12:43:33,388 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Hash determined (took 6ms)
+2015-09-09 12:43:33,393 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-09-09 12:43:33,407 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 42 (took 12ms)
+2015-09-09 12:43:33,473 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-09-09 12:43:33,474 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-09-09 12:43:33,474 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-09-09 12:43:33,475 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-09-09 12:43:33,487 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-09-09 12:43:33,489 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 14 (took 2ms)
+2015-09-09 12:43:33,489 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-09-09 12:43:33,493 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 48 (took 3ms)
+2015-09-09 12:43:33,521 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-09-09 12:43:33,521 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-09-09 12:43:33,522 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-09-09 12:43:33,522 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-09-09 12:43:34,047 [23] INFO  Umbraco.Core.DatabaseContext - [P4868/T37/D4] CanConnect = True
+2015-09-09 12:43:34,058 [23] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - [P4868/T37/D4] Initializing Umbraco internal event handlers for cache refreshing
+2015-09-09 12:43:34,075 [23] INFO  Umbraco.Web.Search.ExamineEvents - [P4868/T37/D4] Initializing Examine and binding to business logic events
+2015-09-09 12:43:34,112 [23] INFO  Umbraco.Web.Search.ExamineEvents - [P4868/T37/D4] Adding examine event handlers for index providers: 4
+2015-09-09 12:43:34,268 [23] INFO  Umbraco.Core.CoreBootManager - [P4868/T37/D4] Umbraco application startup complete (took 907ms)
+2015-09-09 12:43:34,602 [23] INFO  Umbraco.Core.ApplicationContext - [P4868/T37/D4] ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+2015-09-09 12:43:34,643 [23] INFO  umbraco.content - [P4868/T37/D4] Load Xml from file...
+2015-09-09 12:43:34,644 [23] INFO  umbraco.content - [P4868/T37/D4] Loaded Xml from file.
+2015-09-09 12:43:34,732 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-09-09 12:43:34,733 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 0ms)
+2015-09-09 12:43:35,125 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-09-09 12:43:35,126 [23] INFO  Umbraco.Core.PluginManager - [P4868/T37/D4] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 45 (took 0ms)
+2015-09-09 12:44:36,530 [23] INFO  umbraco.BusinessLogic.Log - [P4868/T37/D4] Log scrubbed.  Removed all items older than 2015-07-11 12:44:36

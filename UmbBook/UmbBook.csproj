@@ -388,7 +388,7 @@
     <Compile Include="Models\SearchResultModel.cs" />
     <Compile Include="Models\SearchPageModel.cs" />
     <Compile Include="MyTools\MyTester.cs" />
-    <Compile Include="Testing\TestingAutofac.cs" />
+    <Compile Include="Testing\Autofac.cs" />
     <Compile Include="Controllers\AcceptedFriendsFeedSurfaceController.cs" />
     <Compile Include="Controllers\CommentSurfaceController.cs" />
     <Compile Include="Controllers\FeedListSurfaceController.cs" />
