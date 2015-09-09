@@ -9,16 +9,11 @@ namespace UmbBook.Models
     {
 
         public List<SearchResultModel> Results { get; set; }
-        public string[] TypesToSearchFor { get; set; }
 
         public SearchPageModel()
         {
 
-            Results = new List<SearchResultModel>();
-
-            //we can change this to represent what types searchable
-            TypesToSearchFor = new string[] { "siteMember", "Feed", };
-        
+            Results = new List<SearchResultModel>();        
         }
     }
 }

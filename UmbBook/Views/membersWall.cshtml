@@ -1,32 +1,35 @@
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.MembersWallModel>
-    @using System.Web.Mvc.Html
-    @{
+@using System.Web.Mvc.Html
+@{
     Layout = "Master.cshtml";
-    }
-    <div id="main-container">
-        <div id="main" class="wrapper clearfix">
+}
+<div id="main-container">
+    <div id="main" class="wrapper clearfix">
 
-            <article>
-                <header>
-                    <img height="150" src="@Model.profileImage" />
-                    <h3>@Model.owner.Name</h3>
-                    <a href="mailto:@Model.owner.Email">@Model.owner.Email</a>
-                    @if (Model.isThisHisOwnWall)
+        <article>
+            <header>
+                <img height="150" src="@Model.profileImage" />
+                <h3>@Model.owner.Name</h3>
+                <a href="mailto:@Model.owner.Email">@Model.owner.Email</a>
+                @if (Model.isThisHisOwnWall)
                 {
-                        @Html.Partial("FeedPost", new UmbBook.Models.FeedPostModel())
+                    @Html.Partial("ProfileImagePost")
+
+                    @Html.Partial("FeedPost", new UmbBook.Models.FeedPostModel())
+
                 }
                 else
                 {
-                        @Html.Partial("FriendRequest", new UmbBook.Models.FriendRequestModel())
+                    @Html.Partial("FriendRequest", new UmbBook.Models.FriendRequestModel())
                 }
-                </header>
-                <section></section>
-                <section>
-                    <h2>Feed</h2>
-                    @Html.Action("RenderFeedListAll", "FeedListSurface")
-                </section>
-            </article>
+            </header>
+            <section></section>
+            <section>
+                <h2>Feed</h2>
+                @Html.Action("RenderFeedListAll", "FeedListSurface")
+            </section>
+        </article>
 
 
-        </div> <!-- #main -->
-    </div> <!-- #main-container -->
+    </div> <!-- #main -->
+</div> <!-- #main-container -->

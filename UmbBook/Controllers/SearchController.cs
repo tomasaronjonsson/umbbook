@@ -42,8 +42,7 @@ namespace UmbBook.Controllers
                 {
                     SearchResultModel searchResult = new SearchResultModel();
                     searchResult.Name = item.Fields["nodeName"];
-                    //searchResult.Url = item.Fields["Url"];
-                    searchResult.TypedAlias = item.Fields["nodeTypeAlias"];
+                    searchResult.UserId = item.Fields["id"];
                     searchResultsToReturn.Results.Add(searchResult);
                 }
 

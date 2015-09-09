@@ -1,25 +1,31 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.SearchPageModel>
+﻿@using Umbraco.Web
+@using Umbraco.Web.Macros
+@using Umbraco.Web.Mvc
+@*this is for the partial extension method*@
+@using System.Web.Mvc.Html
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbBook.Models.SearchPageModel>
 @{
     Layout = "Master.cshtml";
 }
 <div id="main-container">
     <div id="main" class="wrapper clearfix">
-
-
-
-
+        <section>
+            @Html.Partial("SearchPost", null)
+        </section>
         <section>
             @if (Model.Results.Count > 0)
             {
+                <h3>Results:</h3>
                 foreach (var item in Model.Results)
                 {
-                    @Html.Partial("SearchResult",item)
+                    @Html.Partial("SearchResult", item)
 
                 }
             }
             else
             {
-                <p>No results found.</p>
+                <p>No results were found.</p>
             }
         </section>
     </div>
