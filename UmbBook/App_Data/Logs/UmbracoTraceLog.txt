@@ -3904,3 +3904,15 @@ System.InvalidOperationException: The model item passed into the dictionary is o
 2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledTasks] Tasks completed, terminated
 2015-09-09 13:21:39,708 [39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7508/T1/D5] [ScheduledPublishing] Tasks completed, terminated
 2015-09-09 13:22:09,799 [39] INFO  Umbraco.Core.UmbracoApplicationBase - [P7508/T1/D5] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-09-09 15:01:25,431 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [LogScrubber] Terminating
+2015-09-09 15:01:25,431 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [LogScrubber] Waiting for tasks to complete
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [LogScrubber] Tasks completed, terminated
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledTasks] Terminating
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledTasks] Waiting for tasks to complete
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [KeepAlive] Terminating
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [KeepAlive] Waiting for tasks to complete
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledTasks] Tasks completed, terminated
+2015-09-09 15:01:25,434 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [KeepAlive] Tasks completed, terminated
+2015-09-09 15:01:25,495 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledPublishing] Terminating
+2015-09-09 15:01:25,495 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledPublishing] Waiting for tasks to complete
+2015-09-09 15:01:25,495 [104] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [P7080/T105/D3] [ScheduledPublishing] Tasks completed, terminated
