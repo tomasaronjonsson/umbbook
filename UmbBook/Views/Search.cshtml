@@ -2,16 +2,21 @@
 @{
     Layout = "Master.cshtml";
 }
+<div id="main-container">
+    <div id="main" class="wrapper clearfix">
+        <section>
+            @if (Model.Results.Count > 0)
+            {
+                foreach (var item in Model.Results)
+                {
+                    <p>@item</p>
 
-@if (Model.Results.Count > 0)
-{
-    foreach (var item in Model.Results)
-	{
-        <p>@item</p>
-
-}
-}
-else
-{
-    <p>No results found.</p>
-}
+                }
+            }
+            else
+            {
+                <p>No results found.</p>
+            }
+        </section>
+    </div>
+</div>
