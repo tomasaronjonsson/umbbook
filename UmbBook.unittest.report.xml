@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="" total="2" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-09-09" time="13:04:10">
+  <environment nunit-version="1.0.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.3.9600.0" platform="Win32NT" cwd="E:\Taj\Code\UmbBook\packages\NunitRunnerTask.2.0.7\build\Nunit" machine-name="MW1008" user="taj" user-domain="MEDIAWORKERS" />
+  <culture-info current-culture="da-DK" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="E:\Taj\Code\UmbBook\UmbBook\bin\UmbBook.dll" executed="True" result="Failure" success="False" time="0,047" asserts="0">
+    <properties>
+      <property name="_PID" value="8368" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+      <stack-trace />
+    </failure>
+    <results>
+      <test-suite type="Namespace" name="UmbBook" executed="True" result="Failure" success="False" time="0,038" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+          <stack-trace />
+        </failure>
+        <results>
+          <test-suite type="Namespace" name="MyTools" executed="True" result="Failure" success="False" time="0,038" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+              <stack-trace />
+            </failure>
+            <results>
+              <test-suite type="TestFixture" name="MyTester" executed="True" result="Failure" success="False" time="0,037" asserts="0">
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                  <stack-trace />
+                </failure>
+                <results>
+                  <test-case name="FailingTest" executed="True" result="Failure" success="False" time="0,026" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: 5
+  But was:  2
+]]></message>
+                      <stack-trace><![CDATA[   at NUnit.Framework.Assert.That(Object actual, IResolveConstraint expression, String message, Object[] args)
+   at UmbBook.MyTools.MyTester.FailingTest() in e:\Taj\Code\UmbBook\UmbBook\MyTools\MyTester.cs:line 30]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="PassingTest" executed="True" result="Success" success="True" time="0,000" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
