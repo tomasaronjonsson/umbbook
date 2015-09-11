@@ -96,16 +96,26 @@ namespace UmbBook.TestHelpers
 
             //for debugging and information
             System.Console.WriteLine("Number of content objects found: " + listOfContent.Count);
+
             //lets check each item
             foreach (var item in listOfContent)
             {
                 //this is for a custom property, if the content alias is comment it should have a custom property called commentContent
-                if (item.DocumentTypeAlias == "comment")
-                {
-                    System.Console.Write(item["commentContent"]);
-                    Assert.IsNotNullOrEmpty(item["commentContent"].ToString());
 
+                switch (item.DocumentTypeAlias)
+                {
+                    case "comment":
+                        //testing something specifcly to comments
+                        Assert.IsNotNullOrEmpty(item["commentContent"].ToString());
+                        break;
+                    case "feed":
+                        //testing something specifcly to feed
+                        Assert.IsNotNullOrEmpty(item["feedContent"].ToString());
+                        break;
+                    default:
+                        break;
                 }
+          
 
                 Assert.AreNotEqual(item.Id,0);
             }

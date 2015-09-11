@@ -6,7 +6,7 @@ using Umbraco.Core.Models;
 
 namespace UmbBook.TestHelpers
 {
-    public class TestContent : IPublishedContent
+    public class TestContentModel : IPublishedContent
     {
         private Dictionary<string, object> values = new Dictionary<string, object>();
 

@@ -86,7 +86,7 @@ namespace UmbBook.TestHelpers
         /// </summary>
         /// <param name="filePathToUmbracoConfig">File path to the location of the umbraco.config to extract content from</param>
         /// <returns>Returns a list of TestContent, a class that implements the IPublishedContent from Umbraco</returns>
-        public static List<TestContent> getCachedContentAsTestContent(string filePathToUmbracoConfig)
+        public static List<TestContentModel> getCachedContentAsTestContent(string filePathToUmbracoConfig)
         {
             //read the cache
             System.Xml.XmlDocument xmldoc = new System.Xml.XmlDocument();
@@ -97,7 +97,7 @@ namespace UmbBook.TestHelpers
             var nodes = xmldoc.SelectNodes("//*[@nodeTypeAlias]");
 
             //list to store all the content we are going to return
-            List<TestContent> listOfContent = new List<TestContent>();
+            List<TestContentModel> listOfContent = new List<TestContentModel>();
 
             //now let's go over all the nodes and extract some information
             foreach (System.Xml.XmlNode node in nodes)
@@ -112,7 +112,7 @@ namespace UmbBook.TestHelpers
 
                 }
                 //ceate a new TestContent to store our information we have collected
-                TestContent publishedContentToStore = new TestContent();
+                TestContentModel publishedContentToStore = new TestContentModel();
                 //was easier to do it this way then to use some mapper
                 publishedContentToStore.Id = int.Parse(attributesNameToValue["id"]);
                 publishedContentToStore.Level = int.Parse(attributesNameToValue["level"]);
