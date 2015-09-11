@@ -10,6 +10,7 @@ using Umbraco.Core.Models;
 using Umbraco.Web.Mvc;
 using System.Web.Security;
 using Umbraco.Web;
+using UmbBook.TestHelpers;
 
 
 namespace UmbBook.MyTools
@@ -20,9 +21,10 @@ namespace UmbBook.MyTools
     public class MyHelper
     {
 
+
+
         public int getBrowsingUserId()
         {
-
             var memberService = ApplicationContext.Current.Services.MemberService;
             var user = HttpContext.Current.User.Identity;
             if (user != null)
@@ -130,5 +132,7 @@ namespace UmbBook.MyTools
 
         }
 
+
+       
     }
 }

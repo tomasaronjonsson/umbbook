@@ -11,6 +11,9 @@ namespace UmbBook.Services
 {
     public class AcceptedFriendsFeedService : IAcceptedFriendsFeed
     {
+        private MyHelper _MyHelper { get; set; }
+
+        
         public FeedsListModel renderAccptedFeed()
         {
             //get our helper

@@ -1,0 +1,952 @@
+﻿ 2015-09-10 09:09:38,227 [P6748/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 09:09:38,255 [P6748/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 09:09:38,266 [P6748/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 9ms)
+ 2015-09-10 09:09:38,380 [P6748/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 09:09:38,426 [P6748/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 46ms)
+ 2015-09-10 09:09:38,427 [P6748/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+System.Reflection.ReflectionTypeLoadException: Could not load types from assembly Umbraco.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, errors:
+Exception: System.TypeLoadException: Method 'PerformRefresh' in type 'TestServerMessenger' from assembly 'Umbraco.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+
+   at Umbraco.Core.TypeFinder.GetTypesWithFormattedException(Assembly a)
+   at Umbraco.Core.TypeFinder.GetClasses(Type assignTypeFrom, IEnumerable`1 assemblies, Boolean onlyConcreteClasses, Func`2 additionalFilter)
+   at Umbraco.Core.TypeFinder.FindClassesOfType[T](IEnumerable`1 assemblies, Boolean onlyConcreteClasses)
+   at Umbraco.Core.TypeFinder.FindClassesOfType[T](IEnumerable`1 assemblies)
+   at Umbraco.Core.PluginManager.<>c__DisplayClass3d`1.<ResolveTypes>b__3c()
+   at Umbraco.Core.PluginManager.LoadViaScanningAndUpdateCacheFile[T](TypeList typeList, TypeResolutionKind resolutionKind, Func`1 finder)
+   at Umbraco.Core.PluginManager.ResolveTypes[T](Func`1 finder, TypeResolutionKind resolutionType, Boolean cacheResult)
+   at Umbraco.Core.PluginManager.ResolveTypes[T](Boolean cacheResult, IEnumerable`1 specificAssemblies)
+   at Umbraco.Core.CoreBootManager.InitializeApplicationEventsResolver()
+   at Umbraco.Core.CoreBootManager.Initialize()
+   at Umbraco.Web.WebBootManager.Initialize()
+   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2015-09-10 09:10:18,628 [P6748/D2/T12] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: InitializationError
+ 2015-09-10 09:48:32,053 [P3772/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 09:48:32,079 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 09:48:32,089 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 9ms)
+ 2015-09-10 09:48:32,191 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 09:48:32,488 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 296ms)
+ 2015-09-10 09:48:32,499 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 09:48:32,507 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2015-09-10 09:48:32,507 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 09:48:32,515 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 8ms)
+ 2015-09-10 09:48:32,527 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 09:48:32,540 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 12ms)
+ 2015-09-10 09:48:32,541 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 09:48:32,557 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 16ms)
+ 2015-09-10 09:48:32,597 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 09:48:32,605 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 09:48:32,605 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 09:48:32,613 [P3772/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 09:48:33,182 [P3772/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1188ms)
+ 2015-09-10 09:48:34,370 [P3772/D2/T8] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 09:48:34,370 [P3772/D2/T7] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 09:48:36,327 [P3772/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 09:48:36,374 [P3772/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 46ms)
+ 2015-09-10 09:48:38,050 [P3772/D2/T9] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 09:48:38,059 [P3772/D2/T9] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 9ms)
+ 2015-09-10 09:48:38,424 [P3772/D2/T9] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username taj@mediaworkers.dk from IP address ::1
+ 2015-09-10 09:48:53,560 [P3772/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Permissions
+ 2015-09-10 09:48:53,569 [P3772/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 8ms)
+ 2015-09-10 09:48:53,591 [P3772/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Upgrade
+ 2015-09-10 09:48:53,591 [P3772/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 0ms)
+ 2015-09-10 09:48:53,613 [P3772/D2/T11] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Version73FileCleanup
+ 2015-09-10 09:48:53,769 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\Web.config
+ 2015-09-10 09:48:53,779 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150901-120508\Web.config
+ 2015-09-10 09:48:53,783 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Web.config
+ 2015-09-10 09:48:53,787 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Umbraco\Install\Views\Web.config
+ 2015-09-10 09:48:53,796 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Umbraco\Xslt\Web.config
+ 2015-09-10 09:48:53,799 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\bin\Web.config
+ 2015-09-10 09:48:53,808 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\umbraco\Install\Views\Web.config
+ 2015-09-10 09:48:53,811 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\umbraco\Xslt\Web.config
+ 2015-09-10 09:48:53,812 [P3772/D2/T11] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\Views\web.config
+ 2015-09-10 09:48:53,815 [P3772/D2/T11] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 201ms)
+ 2015-09-10 09:48:57,685 [P3772/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 09:48:57,713 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 09:48:57,722 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 8ms)
+ 2015-09-10 09:48:57,825 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 09:48:58,197 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 372ms)
+ 2015-09-10 09:48:58,209 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 09:48:58,218 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 9ms)
+ 2015-09-10 09:48:58,219 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 09:48:58,229 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 10ms)
+ 2015-09-10 09:48:58,241 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 09:48:58,255 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 13ms)
+ 2015-09-10 09:48:58,255 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 09:48:58,276 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 20ms)
+ 2015-09-10 09:48:58,312 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 09:48:58,320 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 09:48:58,320 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 09:48:58,329 [P3772/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 8ms)
+ 2015-09-10 09:48:58,939 [P3772/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1318ms)
+ 2015-09-10 09:49:23,975 [P3772/D2/T9] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: ConfigurationChange
+ 2015-09-10 10:18:03,144 [P7960/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:18:03,171 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:18:03,181 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 9ms)
+ 2015-09-10 10:18:03,283 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:18:03,606 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 322ms)
+ 2015-09-10 10:18:03,618 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:18:03,622 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 4ms)
+ 2015-09-10 10:18:03,622 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:18:03,631 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 8ms)
+ 2015-09-10 10:18:03,644 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:18:03,657 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 13ms)
+ 2015-09-10 10:18:03,658 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:18:03,676 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 18ms)
+ 2015-09-10 10:18:03,716 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:18:03,724 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 8ms)
+ 2015-09-10 10:18:03,724 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:18:03,732 [P7960/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 8ms)
+ 2015-09-10 10:18:04,317 [P7960/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1237ms)
+ 2015-09-10 10:18:05,537 [P7960/D2/T7] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:18:07,425 [P7960/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:18:07,453 [P7960/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 28ms)
+ 2015-09-10 10:18:09,387 [P7960/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:18:09,397 [P7960/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 9ms)
+ 2015-09-10 10:18:09,753 [P7960/D2/T7] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username taj@mediaworkers.dk from IP address 127.0.0.1
+ 2015-09-10 10:18:15,360 [P7960/D2/T9] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Permissions
+ 2015-09-10 10:18:15,369 [P7960/D2/T9] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 8ms)
+ 2015-09-10 10:18:15,391 [P7960/D2/T8] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Upgrade
+ 2015-09-10 10:18:15,391 [P7960/D2/T8] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 0ms)
+ 2015-09-10 10:18:15,410 [P7960/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: Version73FileCleanup
+ 2015-09-10 10:18:15,523 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\Web.config
+ 2015-09-10 10:18:15,531 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150901-120508\Web.config
+ 2015-09-10 10:18:15,532 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Web.config
+ 2015-09-10 10:18:15,536 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Umbraco\Install\Views\Web.config
+ 2015-09-10 10:18:15,540 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\NuGetBackup\20150910-090651\Umbraco\Xslt\Web.config
+ 2015-09-10 10:18:15,541 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\bin\Web.config
+ 2015-09-10 10:18:15,548 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\umbraco\Install\Views\Web.config
+ 2015-09-10 10:18:15,549 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\umbraco\Xslt\Web.config
+ 2015-09-10 10:18:15,550 [P7960/D2/T7] INFO  Umbraco.Web.Install.InstallSteps.Version73FileCleanup - Cleaning up web.config file: E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\Views\web.config
+ 2015-09-10 10:18:15,551 [P7960/D2/T7] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 141ms)
+ 2015-09-10 10:18:19,293 [P7960/D3/T19] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:18:19,328 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:18:19,337 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Hash determined (took 8ms)
+ 2015-09-10 10:18:19,443 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:18:19,824 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 381ms)
+ 2015-09-10 10:18:19,841 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:18:19,851 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 10ms)
+ 2015-09-10 10:18:19,852 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:18:19,862 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 10ms)
+ 2015-09-10 10:18:19,874 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:18:19,893 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 19ms)
+ 2015-09-10 10:18:19,894 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:18:19,913 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 18ms)
+ 2015-09-10 10:18:19,951 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:18:19,962 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 10ms)
+ 2015-09-10 10:18:19,962 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:18:19,970 [P7960/D3/T19] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 10:18:20,588 [P7960/D3/T19] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1361ms)
+ 2015-09-10 10:18:21,623 [P7960/D3/T8] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:18:22,377 [P7960/D3/T8] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: DatabaseInstall
+ 2015-09-10 10:18:22,380 [P7960/D3/T8] INFO  Umbraco.Core.DatabaseContext - Database configuration status: Started
+ 2015-09-10 10:18:22,383 [P7960/D3/T8] INFO  Umbraco.Core.DatabaseContext - Database requires upgrade
+ 2015-09-10 10:18:22,383 [P7960/D3/T8] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 5ms)
+ 2015-09-10 10:18:22,475 [P7960/D3/T9] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: DatabaseUpgrade
+ 2015-09-10 10:18:22,476 [P7960/D3/T9] INFO  Umbraco.Web.Install.InstallSteps.DatabaseUpgradeStep - Running 'Upgrade' service
+ 2015-09-10 10:18:22,478 [P7960/D3/T9] INFO  Umbraco.Core.DatabaseContext - Database upgrade started
+ 2015-09-10 10:18:22,486 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Initializing database migrations
+ 2015-09-10 10:18:22,487 [P7960/D3/T9] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Migrations.IMigration
+ 2015-09-10 10:18:22,496 [P7960/D3/T9] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Migrations.IMigration, found 0 (took 8ms)
+ 2015-09-10 10:18:22,565 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddRelationTypeForDocumentOnDelete' to context
+ 2015-09-10 10:18:22,602 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'CreateCacheInstructionTable' to context
+ 2015-09-10 10:18:23,200 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrateAndRemoveTemplateMasterColumn' to context
+ 2015-09-10 10:18:23,432 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrateStylesheetDataToFile' to context
+ 2015-09-10 10:18:23,467 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'RemoveStylesheetDataAndTables' to context
+ 2015-09-10 10:18:23,542 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'RemoveLanguageLocaleColumn' to context
+ 2015-09-10 10:18:23,615 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'UpdateUniqueIdToHaveCorrectIndexType' to context
+ 2015-09-10 10:18:23,651 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddPublicAccessTables' to context
+ 2015-09-10 10:18:23,684 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MovePublicAccessXmlDataToDb' to context
+ 2015-09-10 10:18:23,762 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'RemoveHelpTextColumn' to context
+ 2015-09-10 10:18:23,795 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddExternalLoginsTable' to context
+ 2015-09-10 10:18:23,877 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddUserColumns' to context
+ 2015-09-10 10:18:23,911 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddMigrationTable' to context
+ 2015-09-10 10:18:24,108 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddUniqueIdPropertyTypeColumn' to context
+ 2015-09-10 10:18:24,323 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddForeignKeysForLanguageAndDictionaryTables' to context
+ 2015-09-10 10:18:24,394 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'RemoveUmbracoLoginsTable' to context
+ 2015-09-10 10:18:24,424 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 1: INSERT INTO [umbracoRelationType] (dual,parentObjectType,childObjectType,name,alias) VALUES (0,'c66ba18e-eaf3-4cff-8a22-41b16d66a972','c66ba18e-eaf3-4cff-8a22-41b16d66a972','Relate Parent Document On Delete','relateParentDocumentOnDelete')
+ 2015-09-10 10:18:24,439 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 2: CREATE TABLE [umbracoCacheInstruction] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[utcStamp] DATETIME NOT NULL,
+[jsonInstruction] NTEXT NOT NULL,
+[originated] NVARCHAR(500) NOT NULL)
+ 2015-09-10 10:18:24,441 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 3: ALTER TABLE [umbracoCacheInstruction] ADD CONSTRAINT [PK_umbracoCacheInstruction] PRIMARY KEY ([id])
+ 2015-09-10 10:18:24,447 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 4: UPDATE [umbracoNode] SET [parentID] = 1052 WHERE [id] = 1050
+ 2015-09-10 10:18:24,449 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 5: UPDATE [umbracoNode] SET [path] = '-1,1052,1050' WHERE [id] = 1050
+ 2015-09-10 10:18:24,450 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 6: UPDATE [umbracoNode] SET [parentID] = -1 WHERE [id] = 1052
+ 2015-09-10 10:18:24,451 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 7: UPDATE [umbracoNode] SET [path] = '-1,1052' WHERE [id] = 1052
+ 2015-09-10 10:18:24,452 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 8: UPDATE [umbracoNode] SET [parentID] = 1052 WHERE [id] = 1059
+ 2015-09-10 10:18:24,453 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 9: UPDATE [umbracoNode] SET [path] = '-1,1052,1059' WHERE [id] = 1059
+ 2015-09-10 10:18:24,454 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 10: UPDATE [umbracoNode] SET [parentID] = 1052 WHERE [id] = 1168
+ 2015-09-10 10:18:24,455 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 11: UPDATE [umbracoNode] SET [path] = '-1,1052,1168' WHERE [id] = 1168
+ 2015-09-10 10:18:24,456 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 12: UPDATE [umbracoNode] SET [parentID] = 1052 WHERE [id] = 1101
+ 2015-09-10 10:18:24,457 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 13: UPDATE [umbracoNode] SET [path] = '-1,1052,1101' WHERE [id] = 1101
+ 2015-09-10 10:18:24,459 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 14: ALTER TABLE [cmsTemplate] DROP CONSTRAINT [FK_cmsTemplate_cmsTemplate]
+ 2015-09-10 10:18:24,461 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 15: ALTER TABLE [cmsTemplate] DROP COLUMN [master]
+ 2015-09-10 10:18:24,463 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 16: DELETE FROM [cmsStylesheetProperty] WHERE 1 = 1
+ 2015-09-10 10:18:24,465 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 17: DELETE FROM [umbracoNode] WHERE [nodeObjectType] = '5555da4f-a123-42b2-4488-dcdfb25e4111'
+ 2015-09-10 10:18:24,467 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 18: DROP TABLE [cmsStylesheetProperty]
+ 2015-09-10 10:18:24,482 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 19: DELETE FROM [cmsStylesheet] WHERE 1 = 1
+ 2015-09-10 10:18:24,484 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 20: DELETE FROM [umbracoNode] WHERE [nodeObjectType] = '9f68da4f-a3a8-44c2-8226-dcbd125e4840'
+ 2015-09-10 10:18:24,500 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 21: DROP TABLE [cmsStylesheet]
+ 2015-09-10 10:18:24,501 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 22: ALTER TABLE [cmsContentVersion] DROP COLUMN [LanguageLocale]
+ 2015-09-10 10:18:24,506 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 23: DROP INDEX [umbracoNode].[IX_umbracoNodeUniqueID]
+ 2015-09-10 10:18:24,511 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 24: CREATE UNIQUE NONCLUSTERED INDEX [IX_umbracoNode_uniqueID] ON [umbracoNode] ([uniqueID])
+ 2015-09-10 10:18:24,514 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 25: CREATE TABLE [umbracoAccess] ([id] UniqueIdentifier NOT NULL,
+[nodeId] INTEGER NOT NULL,
+[loginNodeId] INTEGER NOT NULL,
+[noAccessNodeId] INTEGER NOT NULL,
+[createDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoAccess_createDate] DEFAULT (GETDATE()),
+[updateDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoAccess_updateDate] DEFAULT (GETDATE()))
+ 2015-09-10 10:18:24,515 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 26: ALTER TABLE [umbracoAccess] ADD CONSTRAINT [PK_umbracoAccess] PRIMARY KEY ([id])
+ 2015-09-10 10:18:24,516 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 27: ALTER TABLE [umbracoAccess] ADD CONSTRAINT [FK_umbracoAccess_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+ 2015-09-10 10:18:24,517 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 28: ALTER TABLE [umbracoAccess] ADD CONSTRAINT [FK_umbracoAccess_umbracoNode_id1] FOREIGN KEY ([loginNodeId]) REFERENCES [umbracoNode] ([id])
+ 2015-09-10 10:18:24,520 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 29: ALTER TABLE [umbracoAccess] ADD CONSTRAINT [FK_umbracoAccess_umbracoNode_id2] FOREIGN KEY ([noAccessNodeId]) REFERENCES [umbracoNode] ([id])
+ 2015-09-10 10:18:24,522 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 30: CREATE UNIQUE NONCLUSTERED INDEX [IX_umbracoAccess_nodeId] ON [umbracoAccess] ([nodeId])
+ 2015-09-10 10:18:24,524 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 31: CREATE TABLE [umbracoAccessRule] ([id] UniqueIdentifier NOT NULL,
+[accessId] UniqueIdentifier NOT NULL,
+[ruleValue] NVARCHAR(255) NOT NULL,
+[ruleType] NVARCHAR(255) NOT NULL,
+[createDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoAccessRule_createDate] DEFAULT (GETDATE()),
+[updateDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoAccessRule_updateDate] DEFAULT (GETDATE()))
+ 2015-09-10 10:18:24,526 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 32: ALTER TABLE [umbracoAccessRule] ADD CONSTRAINT [PK_umbracoAccessRule] PRIMARY KEY ([id])
+ 2015-09-10 10:18:24,527 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 33: ALTER TABLE [umbracoAccessRule] ADD CONSTRAINT [FK_umbracoAccessRule_umbracoAccess_id] FOREIGN KEY ([accessId]) REFERENCES [umbracoAccess] ([id])
+ 2015-09-10 10:18:24,527 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 34: CREATE UNIQUE NONCLUSTERED INDEX [IX_umbracoAccessRule] ON [umbracoAccessRule] ([accessId],[ruleValue],[ruleType])
+ 2015-09-10 10:18:24,528 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 35: ALTER TABLE [cmsPropertyType] DROP COLUMN [helpText]
+ 2015-09-10 10:18:24,530 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 36: CREATE TABLE [umbracoExternalLogin] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[userId] INTEGER NOT NULL,
+[loginProvider] NVARCHAR(4000) NOT NULL,
+[providerKey] NVARCHAR(4000) NOT NULL,
+[createDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoExternalLogin_createDate] DEFAULT (GETDATE()))
+ 2015-09-10 10:18:24,531 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 37: ALTER TABLE [umbracoExternalLogin] ADD CONSTRAINT [PK_umbracoExternalLogin] PRIMARY KEY ([id])
+ 2015-09-10 10:18:24,532 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 38: ALTER TABLE [umbracoExternalLogin] ADD CONSTRAINT [FK_umbracoExternalLogin_umbracoUser_id] FOREIGN KEY ([userId]) REFERENCES [umbracoUser] ([id])
+ 2015-09-10 10:18:24,534 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 39: ALTER TABLE [umbracoUser] ADD [securityStampToken] NVARCHAR(255) NULL
+ 2015-09-10 10:18:24,536 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 40: ALTER TABLE [umbracoUser] ADD [failedLoginAttempts] INTEGER NULL
+ 2015-09-10 10:18:24,537 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 41: ALTER TABLE [umbracoUser] ADD [lastLockoutDate] DATETIME NULL
+ 2015-09-10 10:18:24,538 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 42: ALTER TABLE [umbracoUser] ADD [lastPasswordChangeDate] DATETIME NULL
+ 2015-09-10 10:18:24,539 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 43: ALTER TABLE [umbracoUser] ADD [lastLoginDate] DATETIME NULL
+ 2015-09-10 10:18:24,540 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 44: CREATE TABLE [umbracoMigration] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[name] NVARCHAR(255) NOT NULL,
+[version] NVARCHAR(50) NOT NULL,
+[createDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoMigration_createDate] DEFAULT (GETDATE()))
+ 2015-09-10 10:18:24,540 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 45: ALTER TABLE [umbracoMigration] ADD CONSTRAINT [PK_umbracoMigrations] PRIMARY KEY ([id])
+ 2015-09-10 10:18:24,541 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 46: CREATE UNIQUE NONCLUSTERED INDEX [IX_umbracoMigration] ON [umbracoMigration] ([name],[version])
+ 2015-09-10 10:18:24,542 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 47: ALTER TABLE [cmsPropertyType] ADD [uniqueID] UniqueIdentifier NOT NULL CONSTRAINT [DF_cmsPropertyType_uniqueID] DEFAULT (NEWID())
+ 2015-09-10 10:18:24,543 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 48: CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsPropertyTypeUniqueID] ON [cmsPropertyType] ([uniqueID])
+ 2015-09-10 10:18:24,544 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 49: UPDATE [cmsPropertyType] SET [uniqueID] = '4ec63f49-e126-52ab-161a-26b40858662b' WHERE [id] = 27
+ 2015-09-10 10:18:24,544 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 50: UPDATE [cmsPropertyType] SET [uniqueID] = '521b16c0-36e6-dccc-ff9a-92be1cf3feca' WHERE [id] = 6
+ 2015-09-10 10:18:24,545 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 51: UPDATE [cmsPropertyType] SET [uniqueID] = 'c02bcc57-29c4-81f5-8fde-4812f51bb221' WHERE [id] = 7
+ 2015-09-10 10:18:24,546 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 52: UPDATE [cmsPropertyType] SET [uniqueID] = 'bee9491a-b9be-0af1-7a35-193aa2d1e849' WHERE [id] = 8
+ 2015-09-10 10:18:24,547 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 53: UPDATE [cmsPropertyType] SET [uniqueID] = '92526c2a-fb99-7d52-d4db-392951c72ec3' WHERE [id] = 9
+ 2015-09-10 10:18:24,548 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 54: UPDATE [cmsPropertyType] SET [uniqueID] = 'b157d115-1b43-5fc9-5a05-849bd34954b5' WHERE [id] = 10
+ 2015-09-10 10:18:24,548 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 55: UPDATE [cmsPropertyType] SET [uniqueID] = '9dc1fb90-890e-4f70-eb56-79f2c15b4abc' WHERE [id] = 24
+ 2015-09-10 10:18:24,577 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 56: UPDATE [cmsPropertyType] SET [uniqueID] = 'bbbcfd13-2f6e-2b45-8894-0b2face8be0e' WHERE [id] = 25
+ 2015-09-10 10:18:24,579 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 57: UPDATE [cmsPropertyType] SET [uniqueID] = '1b5ac6db-72a8-41df-7c09-819f0c005f14' WHERE [id] = 26
+ 2015-09-10 10:18:24,579 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 58: UPDATE [cmsPropertyType] SET [uniqueID] = '3ceab191-e9d8-cb56-34d2-ce270cf7d536' WHERE [id] = 28
+ 2015-09-10 10:18:24,580 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 59: UPDATE [cmsPropertyType] SET [uniqueID] = '0115983a-8086-b267-e61d-3009cd0c211e' WHERE [id] = 29
+ 2015-09-10 10:18:24,581 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 60: UPDATE [cmsPropertyType] SET [uniqueID] = '45168f8a-e650-bcb5-a1fc-80c819aab397' WHERE [id] = 30
+ 2015-09-10 10:18:24,582 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 61: UPDATE [cmsPropertyType] SET [uniqueID] = '80179484-356d-ecfe-fc12-5364534025c2' WHERE [id] = 31
+ 2015-09-10 10:18:24,582 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 62: UPDATE [cmsPropertyType] SET [uniqueID] = '21c4b5b5-12c0-7a28-89be-2ffeceaf5f17' WHERE [id] = 32
+ 2015-09-10 10:18:24,583 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 63: UPDATE [cmsPropertyType] SET [uniqueID] = '2cf8a69b-8485-a783-78e4-fb6fcbcdf999' WHERE [id] = 33
+ 2015-09-10 10:18:24,584 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 64: UPDATE [cmsPropertyType] SET [uniqueID] = '12072b7a-9a16-87d9-6b1f-3d08d0c92fde' WHERE [id] = 34
+ 2015-09-10 10:18:24,586 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 65: UPDATE [cmsPropertyType] SET [uniqueID] = '162ea629-9c2f-11dc-698d-a18dbe81092f' WHERE [id] = 50
+ 2015-09-10 10:18:24,587 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 66: UPDATE [cmsPropertyType] SET [uniqueID] = '2d779ff0-be92-c06c-399b-7813a53b0e45' WHERE [id] = 51
+ 2015-09-10 10:18:24,588 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 67: UPDATE [cmsPropertyType] SET [uniqueID] = '299d784c-c90d-af42-c177-97286cad1719' WHERE [id] = 52
+ 2015-09-10 10:18:24,589 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 68: UPDATE [cmsPropertyType] SET [uniqueID] = 'e401382f-a4e9-3c24-ee70-2b093ee2ae36' WHERE [id] = 53
+ 2015-09-10 10:18:24,590 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 69: UPDATE [cmsPropertyType] SET [uniqueID] = '2a46a0f8-a866-2663-96a1-9ac0de69f397' WHERE [id] = 54
+ 2015-09-10 10:18:24,591 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 70: UPDATE [cmsPropertyType] SET [uniqueID] = '8648da25-c731-35c9-fa14-9d04cab9c730' WHERE [id] = 55
+ 2015-09-10 10:18:24,592 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 71: UPDATE [cmsPropertyType] SET [uniqueID] = '8eed4b96-c7a8-f319-26ad-3a68231080bb' WHERE [id] = 56
+ 2015-09-10 10:18:24,592 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 72: UPDATE [cmsPropertyType] SET [uniqueID] = '93f46ea6-d010-1460-bafd-8603e6327537' WHERE [id] = 57
+ 2015-09-10 10:18:24,593 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 73: UPDATE [cmsPropertyType] SET [uniqueID] = '3a0d7983-9e19-fd57-7b4d-01e22923624f' WHERE [id] = 58
+ 2015-09-10 10:18:24,594 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 74: UPDATE [cmsPropertyType] SET [uniqueID] = 'c06ed9b5-941b-0e44-3941-dca467f5103c' WHERE [id] = 59
+ 2015-09-10 10:18:24,595 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 75: UPDATE [cmsPropertyType] SET [uniqueID] = 'f075a7a3-4ca8-5ec3-0630-cbb57b323dae' WHERE [id] = 60
+ 2015-09-10 10:18:24,595 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 76: UPDATE [cmsPropertyType] SET [uniqueID] = 'ad31141d-b516-bc1f-abe2-4a0edd422b1b' WHERE [id] = 61
+ 2015-09-10 10:18:24,596 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 77: UPDATE [cmsPropertyType] SET [uniqueID] = 'f72d2e08-e79c-0693-519a-9ab161a49784' WHERE [id] = 64
+ 2015-09-10 10:18:24,597 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 78: UPDATE [cmsPropertyType] SET [uniqueID] = '425d9fa4-b0ba-b3bd-f556-8a5a558260e1' WHERE [id] = 62
+ 2015-09-10 10:18:24,598 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 79: UPDATE [cmsPropertyType] SET [uniqueID] = '1d3de842-399f-3959-c3e6-469b867e7e59' WHERE [id] = 63
+ 2015-09-10 10:18:24,598 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 80: UPDATE [cmsPropertyType] SET [uniqueID] = 'e29e3ee8-ca76-bce5-0ceb-fa436951704c' WHERE [id] = 68
+ 2015-09-10 10:18:24,599 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 81: UPDATE [cmsPropertyType] SET [uniqueID] = '141adb94-9c0c-5b00-d5f0-f0bd4be3554f' WHERE [id] = 66
+ 2015-09-10 10:18:24,600 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 82: ALTER TABLE [cmsLanguageText] ADD CONSTRAINT [FK_cmsLanguageText_umbracoLanguage_id] FOREIGN KEY ([languageId]) REFERENCES [umbracoLanguage] ([id])
+ 2015-09-10 10:18:24,603 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 83: ALTER TABLE [cmsDictionary] ALTER COLUMN [parent] UniqueIdentifier NULL
+ 2015-09-10 10:18:24,605 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 84: ALTER TABLE [cmsDictionary] ADD CONSTRAINT [FK_cmsDictionary_cmsDictionary_id] FOREIGN KEY ([parent]) REFERENCES [cmsDictionary] ([id])
+ 2015-09-10 10:18:24,606 [P7960/D3/T9] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 85: DROP TABLE [umbracoUserLogins]
+ 2015-09-10 10:18:24,846 [P7960/D3/T9] INFO  Umbraco.Web.Strategies.Migrations.OverwriteStylesheetFilesFromTempFiles - CSS file is being backed up from E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\css\style.css, to E:\Taj\Code\UmbBook - prerelease - unitesting\UmbBook\App_Data\TEMP\CssMigration\style.css.bak before being migrated to new format
+ 2015-09-10 10:18:24,851 [P7960/D3/T9] INFO  Umbraco.Core.DatabaseContext - Database configuration status: <p>Upgrade completed!</p>
+ 2015-09-10 10:18:24,853 [P7960/D3/T9] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 2378ms)
+ 2015-09-10 10:18:24,867 [P7960/D3/T10] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Executing installation step: UmbracoVersion
+ 2015-09-10 10:18:24,875 [P7960/D3/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:18:24,889 [P7960/D3/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 13ms)
+ 2015-09-10 10:18:25,047 [P7960/D3/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2015-09-10 10:18:25,068 [P7960/D3/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 21ms)
+ 2015-09-10 10:18:25,086 [P7960/D3/T10] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:18:25,088 [P7960/D3/T10] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:18:25,092 [P7960/D3/T10] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:18:27,309 [P7960/D3/T10] INFO  Umbraco.Core.Configuration.ClientDependencyConfiguration - Updated version number from 1372744350 to 1874808472
+ 2015-09-10 10:18:27,312 [P7960/D3/T20] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:18:27,318 [P7960/D3/T8] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:18:27,394 [P7960/D3/T10] INFO  Umbraco.Web.Security.WebSecurity - User Id: 0 logged in
+ 2015-09-10 10:18:27,887 [P7960/D3/T10] INFO  Umbraco.Web.Install.Controllers.InstallApiController - Step completed (took 3019ms)
+ 2015-09-10 10:18:30,577 [P7960/D4/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:18:30,612 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:18:30,624 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 11ms)
+ 2015-09-10 10:18:30,743 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:18:30,754 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 11ms)
+ 2015-09-10 10:18:30,775 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:18:30,776 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-10 10:18:30,776 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:18:30,778 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-10 10:18:30,791 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:18:30,793 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+ 2015-09-10 10:18:30,794 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:18:30,802 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 7ms)
+ 2015-09-10 10:18:30,845 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:18:30,845 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2015-09-10 10:18:30,846 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:18:30,846 [P7960/D4/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-10 10:18:31,417 [P7960/D4/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:18:45,742 [P7960/D2/T13] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: ConfigurationChange
+ 2015-09-10 10:18:57,526 [P7960/D3/T6] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: ConfigurationChange
+ 2015-09-10 10:22:27,819 [P2984/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:22:27,846 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:22:27,858 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 11ms)
+ 2015-09-10 10:22:27,964 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:22:28,286 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 320ms)
+ 2015-09-10 10:22:28,296 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:22:28,301 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 4ms)
+ 2015-09-10 10:22:28,301 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:22:28,313 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 11ms)
+ 2015-09-10 10:22:28,326 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:22:28,339 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 12ms)
+ 2015-09-10 10:22:28,339 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:22:28,357 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 16ms)
+ 2015-09-10 10:22:28,396 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:22:28,402 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 10:22:28,404 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:22:28,411 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 10:22:29,020 [P2984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:22:29,296 [P2984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:22:29,408 [P2984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:22:29,447 [P2984/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 10:22:29,486 [P2984/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:22:29,489 [P2984/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:22:29,492 [P2984/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:22:31,342 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:22:31,361 [P2984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 19ms)
+ 2015-09-10 10:22:31,572 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 10:22:31,635 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 10:22:31,637 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 10:22:31,638 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 10:22:31,638 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 10:22:31,639 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 10:22:33,105 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 10:22:33,106 [P2984/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 10:22:33,139 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 10:22:33,162 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 10:22:33,184 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 10:22:33,206 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 10:22:33,227 [P2984/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 10:22:33,286 [P2984/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 10:22:33,286 [P2984/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 10:22:33,365 [P2984/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 5620ms)
+ 2015-09-10 10:22:33,813 [P2984/D2/T7] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:22:33,939 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:22:33,949 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2015-09-10 10:22:35,076 [P2984/D2/T12] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:22:35,081 [P2984/D2/T10] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:22:55,276 [P2984/D2/T13] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - Login attempt succeeded for username test from IP address ::1
+ 2015-09-10 10:23:17,837 [P2984/D2/T13] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2015-09-10 10:23:17,847 [P2984/D2/T13] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 10ms)
+ 2015-09-10 10:23:17,877 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2015-09-10 10:23:17,888 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 10ms)
+ 2015-09-10 10:23:17,897 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2015-09-10 10:23:17,897 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2015-09-10 10:23:17,899 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2015-09-10 10:23:17,911 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 11ms)
+ 2015-09-10 10:23:17,923 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2015-09-10 10:23:17,936 [P2984/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 13ms)
+ 2015-09-10 10:23:41,258 [P2984/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2015-09-09 10:23:41
+ 2015-09-10 10:33:53,487 [P8864/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:33:53,514 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:33:53,523 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 8ms)
+ 2015-09-10 10:33:53,631 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:33:53,911 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 279ms)
+ 2015-09-10 10:33:53,923 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:33:53,931 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2015-09-10 10:33:53,931 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:33:53,942 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 10ms)
+ 2015-09-10 10:33:53,958 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:33:53,976 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 18ms)
+ 2015-09-10 10:33:53,976 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:33:53,992 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 16ms)
+ 2015-09-10 10:33:54,020 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:33:54,028 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 10:33:54,028 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:33:54,036 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 10:33:54,583 [P8864/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:33:54,807 [P8864/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:33:54,916 [P8864/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:33:54,948 [P8864/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 10:33:54,983 [P8864/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:33:54,988 [P8864/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:33:54,992 [P8864/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:33:55,825 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:33:55,845 [P8864/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 20ms)
+ 2015-09-10 10:33:56,135 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 10:33:56,205 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 10:33:56,206 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 10:33:56,207 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 10:33:56,208 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 10:33:56,209 [P8864/D2/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 10:33:56,499 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 10:33:56,503 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 10:33:56,504 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 10:33:56,505 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 10:33:56,505 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 10:33:56,506 [P8864/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 10:33:56,506 [P8864/D2/T20] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 10:33:56,521 [P8864/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 10:33:56,521 [P8864/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 10:33:56,530 [P8864/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3100ms)
+ 2015-09-10 10:33:56,831 [P8864/D2/T8] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:33:56,972 [P8864/D2/T8] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:33:56,984 [P8864/D2/T8] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 12ms)
+ 2015-09-10 10:33:56,992 [P8864/D2/T9] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:33:57,001 [P8864/D2/T15] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:34:05,111 [P8864/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:34:05,135 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:34:05,142 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 10:34:05,234 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:34:05,243 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 8ms)
+ 2015-09-10 10:34:05,260 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:34:05,261 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-10 10:34:05,261 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:34:05,262 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-10 10:34:05,273 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:34:05,275 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2015-09-10 10:34:05,275 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:34:05,279 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 3ms)
+ 2015-09-10 10:34:05,308 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:34:05,309 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 1ms)
+ 2015-09-10 10:34:05,309 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:34:05,310 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-10 10:34:05,791 [P8864/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:34:05,924 [P8864/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:34:06,055 [P8864/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:34:06,061 [P8864/D3/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 10:34:06,070 [P8864/D3/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:34:06,071 [P8864/D3/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:34:06,075 [P8864/D3/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:34:06,598 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:34:06,599 [P8864/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 0ms)
+ 2015-09-10 10:34:06,852 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 10:34:06,908 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 10:34:06,909 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 10:34:06,910 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 10:34:06,911 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 10:34:06,912 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 10:34:07,171 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 10:34:07,173 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 10:34:07,174 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 10:34:07,175 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 10:34:07,175 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 10:34:07,176 [P8864/D3/T8] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 10:34:07,178 [P8864/D3/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 10:34:07,191 [P8864/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 10:34:07,192 [P8864/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 10:34:07,200 [P8864/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2140ms)
+ 2015-09-10 10:34:07,528 [P8864/D3/T8] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:34:10,394 [P8864/D3/T5] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:34:10,400 [P8864/D3/T8] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:34:27,093 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating (immediate)
+ 2015-09-10 10:34:27,093 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Cancelling tasks
+ 2015-09-10 10:34:27,194 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks cancelled, terminated
+ 2015-09-10 10:34:27,195 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating (immediate)
+ 2015-09-10 10:34:27,195 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Cancelling tasks
+ 2015-09-10 10:34:27,296 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks cancelled, terminated
+ 2015-09-10 10:34:27,296 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating (immediate)
+ 2015-09-10 10:34:27,296 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Cancelling tasks
+ 2015-09-10 10:34:27,397 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks cancelled, terminated
+ 2015-09-10 10:34:27,397 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating (immediate)
+ 2015-09-10 10:34:27,397 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Cancelling tasks
+ 2015-09-10 10:34:27,498 [P8864/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks cancelled, terminated
+ 2015-09-10 10:34:27,500 [P8864/D2/T15] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 10:37:59,767 [P8864/D3/T21] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: taj@mediaworkers.dk, IP Address: ::1
+ 2015-09-10 10:38:59,773 [P8864/D3/T13] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2015-09-09 10:38:59
+ 2015-09-10 10:38:59,848 [P8864/D3/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:38:59,849 [P8864/D3/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2015-09-10 10:48:54,395 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-10 10:48:54,395 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-10 10:48:54,398 [P8864/D3/T91] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-10 10:48:54,406 [P8864/D3/T84] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-10 10:48:54,406 [P8864/D3/T48] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-10 10:48:54,406 [P8864/D3/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-10 10:48:54,406 [P8864/D3/T92] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-10 10:48:58,407 [P8864/D4/T99] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:48:58,431 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:48:58,439 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 10:48:58,536 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:48:58,795 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 258ms)
+ 2015-09-10 10:48:58,806 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:48:58,813 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2015-09-10 10:48:58,814 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:48:58,823 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 9ms)
+ 2015-09-10 10:48:58,833 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:48:58,846 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 12ms)
+ 2015-09-10 10:48:58,847 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:48:58,862 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 15ms)
+ 2015-09-10 10:48:58,888 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:48:58,895 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 10:48:58,896 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:48:58,903 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 10:48:59,357 [P8864/D4/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:48:59,481 [P8864/D4/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:48:59,544 [P8864/D4/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:48:59,550 [P8864/D4/T99] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 10:48:59,558 [P8864/D4/T99] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:48:59,559 [P8864/D4/T99] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:48:59,562 [P8864/D4/T99] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:49:00,089 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:49:00,107 [P8864/D4/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 17ms)
+ 2015-09-10 10:49:00,365 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 10:49:00,421 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 10:49:00,421 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 10:49:00,422 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 10:49:00,422 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 10:49:00,423 [P8864/D4/T60] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 10:49:00,671 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 10:49:00,673 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 10:49:00,673 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 10:49:00,674 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 10:49:00,675 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 10:49:00,675 [P8864/D4/T90] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 10:49:00,677 [P8864/D4/T99] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 10:49:00,692 [P8864/D4/T99] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 10:49:00,693 [P8864/D4/T99] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 10:49:00,700 [P8864/D4/T99] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2344ms)
+ 2015-09-10 10:49:00,870 [P8864/D4/T83] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:49:00,976 [P8864/D4/T83] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 10:49:00,986 [P8864/D4/T83] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 9ms)
+ 2015-09-10 10:49:03,856 [P8864/D4/T82] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:49:03,861 [P8864/D4/T48] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:49:09,082 [P8864/D5/T99] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 10:49:09,106 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 10:49:09,114 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 10:49:09,210 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 10:49:09,218 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 8ms)
+ 2015-09-10 10:49:09,235 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 10:49:09,236 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-10 10:49:09,237 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 10:49:09,238 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-10 10:49:09,248 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 10:49:09,250 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2015-09-10 10:49:09,250 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 10:49:09,254 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 3ms)
+ 2015-09-10 10:49:09,279 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 10:49:09,280 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2015-09-10 10:49:09,280 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 10:49:09,281 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-10 10:49:09,736 [P8864/D5/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:49:09,869 [P8864/D5/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:49:09,998 [P8864/D5/T99] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 10:49:10,003 [P8864/D5/T99] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 10:49:10,012 [P8864/D5/T99] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 10:49:10,013 [P8864/D5/T99] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 10:49:10,016 [P8864/D5/T99] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 10:49:10,517 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 10:49:10,518 [P8864/D5/T99] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2015-09-10 10:49:10,769 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 10:49:10,827 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 10:49:10,828 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 10:49:10,828 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 10:49:10,829 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 10:49:10,830 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 10:49:11,073 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 10:49:11,076 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 10:49:11,077 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 10:49:11,078 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 10:49:11,079 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 10:49:11,079 [P8864/D5/T40] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 10:49:11,082 [P8864/D5/T99] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 10:49:11,107 [P8864/D5/T99] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 10:49:11,108 [P8864/D5/T99] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 10:49:11,115 [P8864/D5/T99] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2083ms)
+ 2015-09-10 10:49:11,377 [P8864/D5/T48] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 10:49:14,310 [P8864/D5/T67] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 10:49:14,316 [P8864/D5/T85] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 10:49:24,494 [P8864/D3/T13] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 10:49:34,063 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating (immediate)
+ 2015-09-10 10:49:34,063 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Cancelling tasks
+ 2015-09-10 10:49:34,164 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks cancelled, terminated
+ 2015-09-10 10:49:34,164 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating (immediate)
+ 2015-09-10 10:49:34,164 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Cancelling tasks
+ 2015-09-10 10:49:34,265 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks cancelled, terminated
+ 2015-09-10 10:49:34,265 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating (immediate)
+ 2015-09-10 10:49:34,265 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Cancelling tasks
+ 2015-09-10 10:49:34,366 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks cancelled, terminated
+ 2015-09-10 10:49:34,366 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating (immediate)
+ 2015-09-10 10:49:34,366 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Cancelling tasks
+ 2015-09-10 10:49:34,467 [P8864/D4/T79] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks cancelled, terminated
+ 2015-09-10 10:49:34,469 [P8864/D4/T79] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 10:52:59,031 [P8864/D5/T9] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 11:06:16,106 [P8864/D6/T114] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 11:06:16,131 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 11:06:16,139 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 11:06:16,238 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 11:06:16,505 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 267ms)
+ 2015-09-10 11:06:16,517 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 11:06:16,524 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2015-09-10 11:06:16,525 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 11:06:16,534 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 9ms)
+ 2015-09-10 11:06:16,545 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 11:06:16,559 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 13ms)
+ 2015-09-10 11:06:16,559 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 11:06:16,576 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 17ms)
+ 2015-09-10 11:06:16,602 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 11:06:16,610 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 11:06:16,610 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 11:06:16,618 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 11:06:17,127 [P8864/D6/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:06:17,314 [P8864/D6/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:06:17,433 [P8864/D6/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:06:17,468 [P8864/D6/T114] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 11:06:17,505 [P8864/D6/T114] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 11:06:17,506 [P8864/D6/T114] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 11:06:17,509 [P8864/D6/T114] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 11:06:18,204 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 11:06:18,223 [P8864/D6/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 18ms)
+ 2015-09-10 11:06:18,482 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 11:06:18,540 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 11:06:18,541 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 11:06:18,541 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 11:06:18,542 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 11:06:18,542 [P8864/D6/T111] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 11:06:18,792 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 11:06:18,795 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 11:06:18,796 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 11:06:18,797 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 11:06:18,797 [P8864/D6/T114] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 11:06:18,798 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 11:06:18,799 [P8864/D6/T105] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 11:06:18,813 [P8864/D6/T114] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 11:06:18,813 [P8864/D6/T114] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 11:06:18,821 [P8864/D6/T114] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2763ms)
+ 2015-09-10 11:06:19,190 [P8864/D6/T110] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 11:06:19,290 [P8864/D6/T110] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 11:06:19,300 [P8864/D6/T110] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2015-09-10 11:06:21,988 [P8864/D6/T106] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 11:06:21,993 [P8864/D6/T105] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 11:07:24,977 [P8864/D6/T109] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2015-09-09 11:07:24
+ 2015-09-10 11:11:19,929 [P8864/D6/T92] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username taj@mediaworkers.dk from IP address ::1
+ 2015-09-10 11:11:20,091 [P8864/D6/T83] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2015-09-10 11:11:20,112 [P8864/D6/T83] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 20ms)
+ 2015-09-10 11:11:23,099 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2015-09-10 11:11:23,113 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 14ms)
+ 2015-09-10 11:11:23,116 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2015-09-10 11:11:23,130 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 13ms)
+ 2015-09-10 11:11:23,150 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2015-09-10 11:11:23,165 [P8864/D6/T84] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 15ms)
+ 2015-09-10 11:16:03,288 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-10 11:16:03,288 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-10 11:16:03,291 [P8864/D6/T11] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-10 11:16:03,299 [P8864/D6/T60] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-10 11:16:03,299 [P8864/D6/T107] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-10 11:16:03,299 [P8864/D6/T17] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-10 11:16:03,299 [P8864/D6/T25] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-10 11:16:33,381 [P8864/D6/T72] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 11:16:33,497 [P8864/D7/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 11:16:33,523 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 11:16:33,530 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 11:16:33,624 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 11:16:33,633 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 8ms)
+ 2015-09-10 11:16:33,650 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 11:16:33,651 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-10 11:16:33,652 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 11:16:33,653 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-10 11:16:33,664 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 11:16:33,666 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2015-09-10 11:16:33,667 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 11:16:33,671 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 4ms)
+ 2015-09-10 11:16:33,696 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 11:16:33,697 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2015-09-10 11:16:33,697 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 11:16:33,698 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-10 11:16:34,167 [P8864/D7/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:16:34,305 [P8864/D7/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:16:34,435 [P8864/D7/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 11:16:34,441 [P8864/D7/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 11:16:34,449 [P8864/D7/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 11:16:34,450 [P8864/D7/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 11:16:34,454 [P8864/D7/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 11:16:35,001 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 11:16:35,002 [P8864/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2015-09-10 11:16:35,245 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 11:16:35,305 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 11:16:35,306 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 11:16:35,306 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 11:16:35,307 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 11:16:35,308 [P8864/D7/T82] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 11:16:35,557 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 11:16:35,558 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 11:16:35,559 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 11:16:35,560 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 11:16:35,560 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 11:16:35,561 [P8864/D7/T108] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 11:16:35,565 [P8864/D7/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 11:16:35,581 [P8864/D7/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 11:16:35,582 [P8864/D7/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 11:16:35,589 [P8864/D7/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2145ms)
+ 2015-09-10 11:16:35,914 [P8864/D7/T82] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 11:16:38,796 [P8864/D7/T29] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 11:16:38,801 [P8864/D7/T86] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 11:30:52,656 [P8864/D7/T20] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: taj@mediaworkers.dk, IP Address: ::1
+ 2015-09-10 12:18:22,064 [P8864/D7/T237] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 12:19:19,147 [P8864/D8/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 12:19:19,176 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 12:19:19,187 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 9ms)
+ 2015-09-10 12:19:19,308 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 12:19:19,638 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 330ms)
+ 2015-09-10 12:19:19,652 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 12:19:19,661 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 8ms)
+ 2015-09-10 12:19:19,661 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 12:19:19,674 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 12ms)
+ 2015-09-10 12:19:19,689 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 12:19:19,703 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 14ms)
+ 2015-09-10 12:19:19,703 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 12:19:19,722 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 18ms)
+ 2015-09-10 12:19:19,747 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 12:19:19,755 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2015-09-10 12:19:19,755 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 12:19:19,763 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 12:19:20,283 [P8864/D8/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:19:20,468 [P8864/D8/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:19:20,590 [P8864/D8/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:19:20,631 [P8864/D8/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 12:19:20,675 [P8864/D8/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 12:19:20,676 [P8864/D8/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 12:19:20,681 [P8864/D8/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 12:19:21,362 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 12:19:21,379 [P8864/D8/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 17ms)
+ 2015-09-10 12:19:21,637 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 12:19:21,697 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 12:19:21,698 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 12:19:21,698 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 12:19:21,699 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 12:19:21,700 [P8864/D8/T237] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 12:19:21,936 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 12:19:21,938 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 12:19:21,939 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 12:19:21,940 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 12:19:21,940 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 12:19:21,941 [P8864/D8/T245] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 12:19:21,942 [P8864/D8/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 12:19:21,957 [P8864/D8/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 12:19:21,958 [P8864/D8/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 12:19:21,965 [P8864/D8/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2873ms)
+ 2015-09-10 12:19:22,100 [P8864/D8/T237] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 12:19:22,204 [P8864/D8/T237] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 12:19:22,215 [P8864/D8/T237] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2015-09-10 12:19:25,151 [P8864/D8/T246] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 12:19:25,157 [P8864/D8/T249] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 12:19:33,977 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-10 12:19:33,977 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-10 12:19:33,978 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-10 12:19:33,978 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-10 12:19:33,980 [P8864/D8/T232] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-10 12:19:33,981 [P8864/D8/T246] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-10 12:19:33,988 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-10 12:19:33,988 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-10 12:19:33,988 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-10 12:19:33,988 [P8864/D8/T245] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-10 12:19:33,988 [P8864/D8/T218] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-10 12:19:33,988 [P8864/D8/T234] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-10 12:20:04,079 [P8864/D8/T230] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 12:25:14,694 [P8864/D9/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 12:25:14,722 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 12:25:14,733 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 10ms)
+ 2015-09-10 12:25:14,857 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 12:25:15,240 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 383ms)
+ 2015-09-10 12:25:15,252 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 12:25:15,260 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 8ms)
+ 2015-09-10 12:25:15,261 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 12:25:15,270 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 9ms)
+ 2015-09-10 12:25:15,286 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 12:25:15,301 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 15ms)
+ 2015-09-10 12:25:15,301 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 12:25:15,326 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 24ms)
+ 2015-09-10 12:25:15,367 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 12:25:15,375 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 8ms)
+ 2015-09-10 12:25:15,376 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 12:25:15,386 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 10ms)
+ 2015-09-10 12:25:15,946 [P8864/D9/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:25:16,146 [P8864/D9/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:25:16,174 [P8864/D9/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:25:16,214 [P8864/D9/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 12:25:16,252 [P8864/D9/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 12:25:16,253 [P8864/D9/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 12:25:16,256 [P8864/D9/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 12:25:16,944 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 12:25:16,963 [P8864/D9/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 18ms)
+ 2015-09-10 12:25:17,223 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 12:25:17,280 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 12:25:17,281 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 12:25:17,282 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 12:25:17,282 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 12:25:17,283 [P8864/D9/T212] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 12:25:17,540 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 12:25:17,542 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 12:25:17,543 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 12:25:17,543 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 12:25:17,544 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 12:25:17,544 [P8864/D9/T205] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 12:25:17,548 [P8864/D9/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 12:25:17,560 [P8864/D9/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 12:25:17,561 [P8864/D9/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 12:25:17,636 [P8864/D9/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2998ms)
+ 2015-09-10 12:25:17,751 [P8864/D9/T206] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 12:25:17,853 [P8864/D9/T206] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 12:25:17,863 [P8864/D9/T206] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2015-09-10 12:25:20,727 [P8864/D9/T208] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 12:25:20,732 [P8864/D9/T212] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 12:25:47,949 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating (immediate)
+ 2015-09-10 12:25:47,949 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Cancelling tasks
+ 2015-09-10 12:25:48,050 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks cancelled, terminated
+ 2015-09-10 12:25:48,050 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating (immediate)
+ 2015-09-10 12:25:48,050 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Cancelling tasks
+ 2015-09-10 12:25:48,151 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks cancelled, terminated
+ 2015-09-10 12:25:48,152 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating (immediate)
+ 2015-09-10 12:25:48,152 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Cancelling tasks
+ 2015-09-10 12:25:48,253 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks cancelled, terminated
+ 2015-09-10 12:25:48,253 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating (immediate)
+ 2015-09-10 12:25:48,253 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Cancelling tasks
+ 2015-09-10 12:25:48,354 [P8864/D9/T207] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks cancelled, terminated
+ 2015-09-10 12:25:48,358 [P8864/D9/T207] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 12:47:12,729 [P8864/D10/T114] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 12:47:12,754 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 12:47:12,763 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Hash determined (took 8ms)
+ 2015-09-10 12:47:12,868 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 12:47:13,158 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 290ms)
+ 2015-09-10 12:47:13,169 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 12:47:13,177 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2015-09-10 12:47:13,177 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 12:47:13,186 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 8ms)
+ 2015-09-10 12:47:13,197 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 12:47:13,213 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 16ms)
+ 2015-09-10 12:47:13,214 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 12:47:13,237 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 22ms)
+ 2015-09-10 12:47:13,262 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 12:47:13,272 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 9ms)
+ 2015-09-10 12:47:13,272 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 12:47:13,280 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 7ms)
+ 2015-09-10 12:47:13,801 [P8864/D10/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:47:13,983 [P8864/D10/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:47:14,011 [P8864/D10/T114] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 12:47:14,044 [P8864/D10/T114] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 12:47:14,082 [P8864/D10/T114] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 12:47:14,083 [P8864/D10/T114] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 12:47:14,087 [P8864/D10/T114] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 12:47:14,768 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 12:47:14,786 [P8864/D10/T114] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 18ms)
+ 2015-09-10 12:47:15,051 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 12:47:15,110 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 12:47:15,111 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 12:47:15,111 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 12:47:15,112 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 12:47:15,112 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 12:47:15,353 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 12:47:15,355 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 12:47:15,356 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 12:47:15,357 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 12:47:15,358 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 12:47:15,359 [P8864/D10/T135] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 12:47:15,359 [P8864/D10/T114] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 12:47:15,373 [P8864/D10/T114] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 12:47:15,373 [P8864/D10/T114] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 12:47:15,440 [P8864/D10/T114] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2763ms)
+ 2015-09-10 12:47:15,777 [P8864/D10/T141] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 12:47:15,882 [P8864/D10/T141] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 12:47:15,892 [P8864/D10/T141] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2015-09-10 12:47:18,564 [P8864/D10/T139] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 12:47:18,567 [P8864/D10/T144] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 12:47:46,417 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-10 12:47:46,417 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-10 12:47:46,420 [P8864/D10/T139] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-10 12:47:46,420 [P8864/D10/T142] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-10 12:47:46,420 [P8864/D10/T141] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-10 12:47:46,420 [P8864/D10/T135] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-10 12:47:46,421 [P8864/D10/T134] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-10 12:48:16,506 [P8864/D10/T141] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
+ 2015-09-10 13:01:31,669 [P8864/D11/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-10 13:01:31,694 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-10 13:01:31,702 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-10 13:01:31,795 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-10 13:01:31,804 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 8ms)
+ 2015-09-10 13:01:31,822 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-10 13:01:31,823 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-10 13:01:31,823 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-10 13:01:31,824 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-10 13:01:31,834 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-10 13:01:31,836 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2015-09-10 13:01:31,837 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-10 13:01:31,841 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 4ms)
+ 2015-09-10 13:01:31,867 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-10 13:01:31,868 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2015-09-10 13:01:31,868 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-10 13:01:31,869 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-10 13:01:32,357 [P8864/D11/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 13:01:32,560 [P8864/D11/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 13:01:32,588 [P8864/D11/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-10 13:01:32,621 [P8864/D11/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will rebuild its caches and indexes and then adjust it's last synced id to the latest found in the database and will start maintaining cache updates based on that id
+ 2015-09-10 13:01:32,659 [P8864/D11/T1] INFO  umbraco.content - Load Xml from file...
+ 2015-09-10 13:01:32,660 [P8864/D11/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2015-09-10 13:01:32,665 [P8864/D11/T1] INFO  umbraco.content - Loading content from database...
+ 2015-09-10 13:01:33,369 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-10 13:01:33,371 [P8864/D11/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 2ms)
+ 2015-09-10 13:01:33,628 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1113
+ 2015-09-10 13:01:33,684 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1112
+ 2015-09-10 13:01:33,684 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1111
+ 2015-09-10 13:01:33,685 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1078
+ 2015-09-10 13:01:33,685 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1085
+ 2015-09-10 13:01:33,686 [P8864/D11/T176] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1097
+ 2015-09-10 13:01:33,961 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1113
+ 2015-09-10 13:01:33,963 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1112
+ 2015-09-10 13:01:33,964 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1111
+ 2015-09-10 13:01:33,965 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1078
+ 2015-09-10 13:01:33,966 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1085
+ 2015-09-10 13:01:33,967 [P8864/D11/T164] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "UmbBookSearchIndexSet". Please ensure all names are unique, Provider=UmbBookSearchIndexer, NodeId=1097
+ 2015-09-10 13:01:33,969 [P8864/D11/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-10 13:01:33,984 [P8864/D11/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-10 13:01:33,984 [P8864/D11/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-10 13:01:34,119 [P8864/D11/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2502ms)
+ 2015-09-10 13:01:34,368 [P8864/D11/T174] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-10 13:01:34,471 [P8864/D11/T174] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-10 13:01:34,472 [P8864/D11/T174] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2015-09-10 13:01:37,139 [P8864/D11/T172] INFO  umbraco.content - Save Xml to file...
+ 2015-09-10 13:01:37,144 [P8864/D11/T158] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-10 13:02:35,872 [P8864/D11/T177] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2015-09-09 13:02:35
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-10 13:16:12,144 [P8864/D11/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-10 13:16:12,145 [P8864/D11/T164] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-10 13:16:12,145 [P8864/D11/T179] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-10 13:16:12,145 [P8864/D11/T174] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-10 13:16:12,145 [P8864/D11/T176] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-10 13:16:42,244 [P8864/D11/T177] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: BinDirChangeOrDirectoryRename
