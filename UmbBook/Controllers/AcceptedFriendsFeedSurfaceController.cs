@@ -20,19 +20,19 @@ namespace UmbBook.Controllers
         /// <summary>
         /// This class has dependency injection and is testable
         /// </summary>
-        private readonly IAcceptedFriendsFeed _myService;
+        private readonly IFriendService _friendHelper;
 
         ///Constructors needed for testability and DI
-             public AcceptedFriendsFeedSurfaceController(UmbracoContext umbracoContext, IAcceptedFriendsFeed theService)
+             public AcceptedFriendsFeedSurfaceController(UmbracoContext umbracoContext, IFriendService theService)
             : base(umbracoContext)
         {
-            _myService = theService;
+            _friendHelper = theService;
         }
 
 
         public ActionResult renderAccptedFeed()
         {
-            return PartialView("FeedsList", _myService.renderAccptedFeed());
+            return PartialView("FeedsList", _friendHelper.renderAccptedFeed());
 
         }
     }

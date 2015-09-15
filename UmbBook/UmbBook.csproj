@@ -2154,7 +2154,7 @@
     <Compile Include="Controllers\FeedPostSurfaceController.cs" />
     <Compile Include="Controllers\MembersWallController.cs" />
     <Compile Include="Controllers\ProfilePictureSurfaceController.cs" />
-    <Compile Include="Interfaces\IAcceptedFriendsFeed.cs" />
+    <Compile Include="Interfaces\IFriendService.cs" />
     <Compile Include="Models\CommentPostModel.cs" />
     <Compile Include="Models\CommentsListModel.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
@@ -2176,7 +2176,7 @@
     <Compile Include="pocos\FriendRequest.cs" />
     <Compile Include="pocos\RegisterEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AcceptedFriendsFeedService.cs" />
+    <Compile Include="Services\FriendService.cs" />
     <Compile Include="TestHelpers\MyTest.cs" />
     <Compile Include="TestHelpers\TestContentModel.cs" />
     <Compile Include="TestHelpers\TestHelper.cs" />

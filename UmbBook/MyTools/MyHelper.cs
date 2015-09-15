@@ -63,39 +63,7 @@ namespace UmbBook.MyTools
             }
             return 0;
         }
-        /// <summary>
-        /// Returns a FriendRequestsViewModel with a list of all accepted friends for the current browsing user
-        /// </summary>
-        /// <returns></returns>
-        public FriendRequestsViewModel acceptedFriendsToViewModel()
-        {
-            //get the user id who is browsing
-            int userId = getBrowsingUserId();
-
-            //get all the friend request which involve him and a status of accepted
-            var acceptedFriends = _database.Query<UmbBook.pocos.FriendRequest>("SELECT * FROM FriendRequests WHERE RequestingUserId =@0 AND accepted=@1 OR TargetUserId = @0 AND accepted=@1", userId.ToString(), "true");
-
-            FriendRequestsViewModel acceptedFriendsToViewModel = new FriendRequestsViewModel();
-
-            //let's get the imember objects for each and store it in the 
-            foreach (var item in acceptedFriends)
-            {
-                //because we got 2 ids , but are just interested in either one of them (not the user himself
-                int userIdToAdd;
-
-                if (item.RequestingUserId == userId)
-                {
-                    userIdToAdd = item.TargetUserId;
-                }
-                else
-                {
-                    userIdToAdd = item.RequestingUserId;
-                }
-                acceptedFriendsToViewModel.friendRequests.Add(_memberService.GetById(userIdToAdd));
-            }
-            return acceptedFriendsToViewModel;
-        }
-
+     
 
         /// <summary>
         /// Returns a FeedsListModel with all the feed of the input userId, if the userId is -1, all feed is returned

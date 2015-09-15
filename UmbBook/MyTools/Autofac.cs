@@ -38,7 +38,7 @@ namespace UmbBook.MyTools
             
 
             //add custom class to the container as transient instance
-            builder.RegisterType<AcceptedFriendsFeedService>().As<IAcceptedFriendsFeed>();
+            builder.RegisterType<FriendService>().As<IFriendService>();
 
             //se if we can just pass the instances to the builder, works and not needed cause of the umbracocontext, but gives us more control
             builder.RegisterInstance(UmbracoContext.Current.Application.Services.ContentService);

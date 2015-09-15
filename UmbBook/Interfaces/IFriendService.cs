@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 using UmbBook.Models;
 namespace UmbBook.Interfaces
 {
-    public interface IAcceptedFriendsFeed
+    public interface IFriendService
     {
 
        FeedsListModel renderAccptedFeed();
+
+       FriendRequestsViewModel acceptedFriendsToViewModel();
+
+       FriendRequestsViewModel RenderFriendRequests();
+
+       String RequestFriend(string userId);
+
+       void AcceptFriend(int userId);
     }
 }
