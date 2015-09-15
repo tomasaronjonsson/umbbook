@@ -44,6 +44,7 @@ namespace UmbBook.MyTools
             builder.RegisterInstance(UmbracoContext.Current.Application.Services.ContentService);
             builder.RegisterInstance(UmbracoContext.Current.Application.Services.MemberService);
             builder.RegisterInstance(UmbracoContext.Current.Application.Services.RelationService);
+            builder.RegisterInstance(UmbracoContext.Current.Application.Services.MediaService);
             builder.RegisterInstance(UmbracoContext.Current.Application.DatabaseContext.Database).As<Umbraco.Core.Persistence.Database>();
 
             //register the myhelper class should be a interface etc.

@@ -67,10 +67,8 @@ namespace UmbBook.TestHelpers
             //createa umbraco context
             var umbracoContext = TestHelper.MockUmbracoContext(applicationContext);
 
-
-
             //createa controller to test we mock the services he uses
-            var controllerToTest = new UmbBook.Controllers.AcceptedFriendsFeedSurfaceController(umbracoContext, Mock.Of<UmbBook.Services.AcceptedFriendsFeedService>());
+            var controllerToTest = new UmbBook.Controllers.AcceptedFriendsFeedSurfaceController(umbracoContext, Mock.Of<UmbBook.Interfaces.IAcceptedFriendsFeed>());
 
 
             TestHelper.SetupControllerContext(umbracoContext, controllerToTest);
