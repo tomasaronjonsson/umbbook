@@ -20,14 +20,9 @@ namespace UmbBook.Controllers
         /// <summary>
         /// This class has dependency injection and is testable
         /// </summary>
-
-
         private readonly IAcceptedFriendsFeed _myService;
 
-        private readonly UmbracoHelper _umbracoHelper;
-
-
-        ///Constructors needed for testability
+        ///Constructors needed for testability and DI
         public AcceptedFriendsFeedSurfaceController(UmbracoContext umbracoContext)
             : base(umbracoContext)
         {
