@@ -8,17 +8,25 @@ using Examine.Providers;
 using UmbBook.Models;
 using UmbBook.MyTools;
 using Umbraco.Core.Models;
+using Umbraco.Web;
 
 namespace UmbBook.Controllers
 {
     public class SearchController : Umbraco.Web.Mvc.RenderMvcController
     {
+
+
+        ///Constructors needed for testability and DI
+        public SearchController(UmbracoContext umbracoContext)
+            : base(umbracoContext)
+        {
+        }
+
         /// <summary>
         /// Hi hacjking in progress! WE are going to search here
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-
         public override System.Web.Mvc.ActionResult Index(Umbraco.Web.Models.RenderModel model)
         {
             //the incoming search term
@@ -37,7 +45,7 @@ namespace UmbBook.Controllers
                 //do some searching
                 var searchResults = umbBookSearch.Search(incomingSearch, true);
 
-                
+
                 foreach (var item in searchResults)
                 {
                     SearchResultModel searchResult = new SearchResultModel();
@@ -51,5 +59,5 @@ namespace UmbBook.Controllers
             return CurrentTemplate(searchResultsToReturn);
 
         }
-	}
+    }
 }

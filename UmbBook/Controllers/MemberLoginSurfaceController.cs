@@ -6,13 +6,19 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using UmbBook.Models;
+using Umbraco.Web;
 
 namespace UmbBook.Controllers
 {
     public class MemberLoginSurfaceController : Umbraco.Web.Mvc.SurfaceController
     {
 
-        
+        ///Constructors needed for testability and DI
+        public MemberLoginSurfaceController(UmbracoContext umbracoContext)
+            : base(umbracoContext)
+        {
+        }
+
         //members to log out
         [HttpGet]
         [ActionName("MemberLogout")]

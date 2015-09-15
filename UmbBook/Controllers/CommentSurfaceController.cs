@@ -13,17 +13,12 @@ namespace UmbBook.Controllers
 {
     public class CommentSurfaceController : SurfaceController
     {
-        IContentService _contentService;
-        IMemberService _memberService;
-        IRelationService _relationService;
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IRelationService _relationService;
 
 
         ///Constructors needed for testability and DI
-        public CommentSurfaceController(UmbracoContext umbracoContext)
-            : base(umbracoContext)
-        {
-        }
-
         public CommentSurfaceController(UmbracoContext umbracoContext, 
             IContentService _contentService, 
             IMemberService _memberService, 

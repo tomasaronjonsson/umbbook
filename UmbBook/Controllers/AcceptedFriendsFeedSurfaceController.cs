@@ -23,11 +23,6 @@ namespace UmbBook.Controllers
         private readonly IAcceptedFriendsFeed _myService;
 
         ///Constructors needed for testability and DI
-        public AcceptedFriendsFeedSurfaceController(UmbracoContext umbracoContext)
-            : base(umbracoContext)
-        {
-        }
-
         public AcceptedFriendsFeedSurfaceController(UmbracoContext umbracoContext, IAcceptedFriendsFeed theService)
             : base(umbracoContext)
         {

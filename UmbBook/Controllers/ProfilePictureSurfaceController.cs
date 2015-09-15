@@ -8,11 +8,37 @@ using Umbraco.Web.Mvc;
 using UmbBook.Models;
 using System.IO;
 using Umbraco.Core.Models;
+using Umbraco.Core.Services;
+using Umbraco.Web;
+using UmbBook.Interfaces;
 
 namespace UmbBook.Controllers
 {
     public class ProfilePictureSurfaceController : SurfaceController
     {
+
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IMediaService _mediaService;
+        private readonly IMyHelper _myHelper;
+        private readonly IRelationService _relationService;
+
+        //Constructors needed for testability and DI
+        public ProfilePictureSurfaceController(UmbracoContext umbracoContext,
+            IContentService _contentService,
+            IMemberService _memberService,
+            IMediaService _mediaService,
+            IMyHelper _myHelper,
+            IRelationService _relationService)
+            : base(umbracoContext)
+        {
+            this._contentService = _contentService;
+            this._memberService = _memberService;
+            this._mediaService = _mediaService;
+            this._relationService = _relationService;
+            this._myHelper = _myHelper;
+        }
+
 
         [HttpPost]
         [ActionName("ProfileImagePost")]
@@ -30,42 +56,25 @@ namespace UmbBook.Controllers
                     if (profileImageFile != null && profileImageFile.ContentLength > 0)
                     {
 
-                        var memberService = ApplicationContext.Services.MemberService;
-
-                        var mediaService = ApplicationContext.Services.MediaService;
-
-                        var relationService = ApplicationContext.Services.RelationService;
-
                         //lets store the media
-                        var memberToStore = memberService.GetByUsername(User.Identity.Name);
+                        var memberToStore = _memberService.GetByUsername(User.Identity.Name);
 
                         //create the media item 
-                        var profileImageMediaToSTore = mediaService.CreateMedia(memberToStore.Name, 1132, "Image");
+                        var profileImageMediaToSTore = _mediaService.CreateMedia(memberToStore.Name, 1132, "Image");
 
                         //save it to create a medi aId
-                        mediaService.Save(profileImageMediaToSTore);
-
+                        _mediaService.Save(profileImageMediaToSTore);
 
                         //let umbraco take care of the file
-                        profileImageMediaToSTore.SetValue("umbracoFile",Request.Files[0]);
-
-                        
+                        profileImageMediaToSTore.SetValue("umbracoFile", Request.Files[0]);
 
                         //save the whole thing
-                        mediaService.Save(profileImageMediaToSTore);
-
-                        
+                        _mediaService.Save(profileImageMediaToSTore);
 
                         //meow we need to create the relation between the member and his profile picture
-
-                        var relationType = relationService.GetRelationTypeByAlias("memberToProfileImage");
-
+                        var relationType = _relationService.GetRelationTypeByAlias("memberToProfileImage");
                         var nRelation = new Relation(memberToStore.Id, profileImageMediaToSTore.Id, relationType);
-                        
-                        relationService.Save(nRelation);
-
-
-                        
+                        _relationService.Save(nRelation);
                     }
 
                 }

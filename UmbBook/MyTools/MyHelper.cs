@@ -11,6 +11,9 @@ using Umbraco.Web.Mvc;
 using System.Web.Security;
 using Umbraco.Web;
 using UmbBook.TestHelpers;
+using UmbBook.Interfaces;
+using Umbraco.Core.Services;
+using Umbraco.Core.Persistence;
 
 
 namespace UmbBook.MyTools
@@ -18,20 +21,38 @@ namespace UmbBook.MyTools
     /// <summary>
     /// Can I do this? 
     /// </summary>
-    public class MyHelper
+    public class MyHelper : IMyHelper
     {
+        private readonly UmbracoContext _umbracoContext;
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IRelationService _relationService;
+        private readonly Database _database;
 
+
+        ///Constructors needed for testability and DI
+        public MyHelper(UmbracoContext _umbracoContext,
+            IContentService _contentService,
+            IMemberService _memberService,
+            IRelationService _relationServices,
+            Database _database)
+        {
+            this._contentService = _contentService;
+            this._memberService = _memberService;
+            this._relationService = _relationServices;
+            this._database = _database;
+            this._umbracoContext = _umbracoContext;
+        }
 
 
         public int getBrowsingUserId()
         {
-            var memberService = ApplicationContext.Current.Services.MemberService;
             var user = HttpContext.Current.User.Identity;
             if (user != null)
             {
                 if (user.IsAuthenticated)
                 {
-                    var browsingUser = memberService.GetByUsername(user.Name);
+                    var browsingUser = _memberService.GetByUsername(user.Name);
 
                     return browsingUser.Id;
                 }
@@ -44,20 +65,13 @@ namespace UmbBook.MyTools
         /// <returns></returns>
         public FriendRequestsViewModel acceptedFriendsToViewModel()
         {
-
-            //get the database object
-            var database = ApplicationContext.Current.DatabaseContext.Database;
-
-
             //get the user id who is browsing
             int userId = getBrowsingUserId();
 
             //get all the friend request which involve him and a status of accepted
-            var acceptedFriends = database.Query<UmbBook.pocos.FriendRequest>("SELECT * FROM FriendRequests WHERE RequestingUserId =@0 AND accepted=@1 OR TargetUserId = @0 AND accepted=@1", userId.ToString(), "true");
-
+            var acceptedFriends = _database.Query<UmbBook.pocos.FriendRequest>("SELECT * FROM FriendRequests WHERE RequestingUserId =@0 AND accepted=@1 OR TargetUserId = @0 AND accepted=@1", userId.ToString(), "true");
 
             FriendRequestsViewModel acceptedFriendsToViewModel = new FriendRequestsViewModel();
-            var memberService = ApplicationContext.Current.Services.MemberService;
 
             //let's get the imember objects for each and store it in the 
             foreach (var item in acceptedFriends)
@@ -73,7 +87,7 @@ namespace UmbBook.MyTools
                 {
                     userIdToAdd = item.RequestingUserId;
                 }
-                acceptedFriendsToViewModel.friendRequests.Add(memberService.GetById(userIdToAdd));
+                acceptedFriendsToViewModel.friendRequests.Add(_memberService.GetById(userIdToAdd));
             }
             return acceptedFriendsToViewModel;
         }
@@ -87,16 +101,12 @@ namespace UmbBook.MyTools
         public FeedsListModel getAllFeedByUserId(int userID)
         {
 
-            var relationService = ApplicationContext.Current.Services.RelationService;
-            var memberService = ApplicationContext.Current.Services.MemberService;
-
-
             //first we need the relation type object
-            IRelationType relationTypeToFetch = relationService.GetRelationTypeByAlias("feedToUser");
+            IRelationType relationTypeToFetch = _relationService.GetRelationTypeByAlias("feedToUser");
 
 
             //now we can create a relation list and sort it by createdate
-            var listOfRelationFeedToUser = relationService.GetAllRelationsByRelationType(relationTypeToFetch.Id).Where(x => x.ChildId == userID);
+            var listOfRelationFeedToUser = _relationService.GetAllRelationsByRelationType(relationTypeToFetch.Id).Where(x => x.ChildId == userID);
 
 
             //now let's create FeedListModel to store our feedlist
@@ -110,13 +120,14 @@ namespace UmbBook.MyTools
                 FeedViewModel feedViewModelToStore = new FeedViewModel();
 
                 //in the relation the child is the member id
-                feedViewModelToStore.author = memberService.GetById(item.ChildId);
+                feedViewModelToStore.author = _memberService.GetById(item.ChildId);
 
 
                 //and the parent is the feed 
 
                 //we are going to be using the ipublished version here for the front end
                 var umbHelper = new UmbracoHelper(UmbracoContext.Current);
+
                 feedViewModelToStore.feed = umbHelper.TypedContent(item.ParentId);
 
                 //let's make sure neither is null , else we will not add the feedviewmodel to our collection
@@ -133,6 +144,6 @@ namespace UmbBook.MyTools
         }
 
 
-       
+
     }
 }

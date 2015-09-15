@@ -2141,6 +2141,7 @@
   <ItemGroup>
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Interfaces\IMyHelper.cs" />
     <Compile Include="Models\SearchResultModel.cs" />
     <Compile Include="Models\SearchPageModel.cs" />
     <Compile Include="MyTools\Autofac.cs" />

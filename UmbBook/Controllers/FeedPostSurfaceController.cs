@@ -5,11 +5,31 @@ using System.Web;
 using System.Web.Mvc;
 using UmbBook.Models;
 using Umbraco.Core.Models;
+using Umbraco.Core.Services;
+using Umbraco.Web;
 
 namespace UmbBook.Controllers
 {
     public class FeedPostSurfaceController : Umbraco.Web.Mvc.SurfaceController
     {
+
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IRelationService _relationService;
+
+
+        //Constructors needed for testability and DI
+        public FeedPostSurfaceController(UmbracoContext umbracoContext,
+            IContentService _contentService,
+            IMemberService _memberService,
+            IRelationService _relationService)
+            : base(umbracoContext)
+        {
+            this._contentService = _contentService;
+            this._memberService = _memberService;
+            this._relationService = _relationService;
+        }
+
 
         [HttpGet]
         [ActionName("FeedPost")]
@@ -24,31 +44,32 @@ namespace UmbBook.Controllers
         [ActionName("FeedPost")]
         public ActionResult FeedPost(FeedPostModel model)
         {
+            //check if user is logged in
             if (User.Identity.IsAuthenticated)
             {
+                //check if the feed is okay
                 if (String.IsNullOrEmpty(model.feedContent))
                 {
                     return RedirectToCurrentUmbracoPage();
                 }
 
-                var contentService = Services.ContentService;
+                //get the username of the poster
+                int userId = _memberService.GetByUsername(User.Identity.Name).Id;
 
-                int userId = Services.MemberService.GetByUsername(User.Identity.Name).Id;
-
-                var feed = contentService.CreateContent(
+                //create a new content 
+                var feed = _contentService.CreateContent(
                     "feed",
                     1084,
                     "feed", userId);
-
+                //store the value
                 feed.SetValue("feedContent", model.feedContent);
+                //published it and save with the content service
+                _contentService.SaveAndPublishWithStatus(feed);
 
-                contentService.SaveAndPublishWithStatus(feed);
-
-                var relationServices = Services.RelationService;
-
-                var relationType = relationServices.GetRelationTypeByAlias("feedToUser");
+                //create a relationship between the posting user and the feed, and save it
+                var relationType = _relationService.GetRelationTypeByAlias("feedToUser");
                 var nRelation = new Relation(feed.Id, userId, relationType);
-                relationServices.Save(nRelation);
+                _relationService.Save(nRelation);
             }
 
             return RedirectToCurrentUmbracoPage();

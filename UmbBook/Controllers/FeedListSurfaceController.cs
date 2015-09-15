@@ -10,30 +10,25 @@ using Umbraco.Core.Models;
 using UmbBook.MyTools;
 using Umbraco.Web;
 using Umbraco.Core.Services;
+using UmbBook.Interfaces;
 
 namespace UmbBook.Controllers
 {
     public class FeedListSurfaceController : SurfaceController
     {
 
-        IContentService _contentService;
-        IMemberService _memberService;
-        IRelationService _relationService;
-        MyHelper _myHelper;
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IRelationService _relationService;
+        private readonly IMyHelper _myHelper;
 
 
         //Constructors needed for testability and DI
-        public FeedListSurfaceController(UmbracoContext umbracoContext)
-            : base(umbracoContext)
-        {
-
-        }
-
         public FeedListSurfaceController(UmbracoContext umbracoContext,
             IContentService _contentService,
             IMemberService _memberService,
             IRelationService _relationService,
-            MyHelper _myHelper)
+            IMyHelper _myHelper)
             : base(umbracoContext)
         {
             this._contentService = _contentService;
@@ -61,9 +56,6 @@ namespace UmbBook.Controllers
         /// <returns></returns>
         public ActionResult RenderFeedListAll()
         {
-            //_contentService = ApplicationContext.Services.ContentService;
-            //_memberService = ApplicationContext.Services.MemberService;
-            //_relationService = ApplicationContext.Services.re
 
             FeedsListModel feedListToReturn = new FeedsListModel();
 

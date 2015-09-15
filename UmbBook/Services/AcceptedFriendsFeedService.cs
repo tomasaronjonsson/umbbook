@@ -11,16 +11,19 @@ namespace UmbBook.Services
 {
     public class AcceptedFriendsFeedService : IAcceptedFriendsFeed
     {
-        private MyHelper _MyHelper { get; set; }
+        private readonly MyHelper _myHelper;
 
+        
+        public AcceptedFriendsFeedService(MyHelper _myHelper)
+        {
+            this._myHelper = _myHelper;
+        }
         
         public FeedsListModel renderAccptedFeed()
         {
-            //get our helper
-            var myHelper = new MyHelper();
 
             //now we got a list of all accepted friends for the logged in user
-            FriendRequestsViewModel acceptedFriends = myHelper.acceptedFriendsToViewModel();
+            FriendRequestsViewModel acceptedFriends = _myHelper.acceptedFriendsToViewModel();
 
             //lets create a feeds list model to return
             FeedsListModel feedsListToReturn = new FeedsListModel();
@@ -28,7 +31,7 @@ namespace UmbBook.Services
             //now createa a collection of feeds from all the users
             foreach (var a in acceptedFriends.friendRequests)
             {
-                var allFeedFromUser = myHelper.getAllFeedByUserId(a.Id);
+                var allFeedFromUser = _myHelper.getAllFeedByUserId(a.Id);
 
                 feedsListToReturn.feeds.AddRange(allFeedFromUser.feeds);
 

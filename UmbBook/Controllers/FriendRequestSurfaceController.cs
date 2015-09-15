@@ -10,46 +10,62 @@ using System.Web.Mvc;
 using Umbraco.Core.Models;
 using UmbBook.Models;
 using UmbBook.MyTools;
+using Umbraco.Core.Services;
+using Umbraco.Web;
+using Umbraco.Core.Persistence;
+using UmbBook.Interfaces;
 
 namespace UmbBook.Controllers
 {
     public class FriendRequestSurfaceController : SurfaceController
     {
+
+        private readonly IContentService _contentService;
+        private readonly IMemberService _memberService;
+        private readonly IRelationService _relationService;
+        private readonly Database _database;
+        private readonly IMyHelper _myHelper;
+
+
+        //Constructors needed for testability and DI
+        public FriendRequestSurfaceController(UmbracoContext umbracoContext,
+            IContentService _contentService,
+            IMemberService _memberService,
+            IRelationService _relationService,
+            Database _database,
+            IMyHelper _myHelper)
+            : base(umbracoContext)
+        {
+            this._contentService = _contentService;
+            this._memberService = _memberService;
+            this._relationService = _relationService;
+            this._database = _database;
+            this._myHelper = _myHelper;
+        }
+
         //todo this guy is going to render the accepted friends
         public ActionResult RenderAcceptedFriends()
         {
-            //create our helper
-            var myHelper = new MyHelper();
-
-
-            return PartialView("AcceptedFriends", myHelper.acceptedFriendsToViewModel());
+            return PartialView("AcceptedFriends", _myHelper.acceptedFriendsToViewModel());
         }
 
         //this guy is going to render incoming friend requests
-        [ChildActionOnly]
         public ActionResult RenderFriendRequests()
         {
-            //fetch a database
-            var database = ApplicationContext.DatabaseContext.Database;
-
-            //create our helper
-            var myHelper = new MyHelper();
 
             //get the user id who is browsing
-            int userId = myHelper.getBrowsingUserId();
+            int userId = _myHelper.getBrowsingUserId();
 
             //get all the friend request which involve him and a status of not accepted
-            var friendRequests = database.Query<UmbBook.pocos.FriendRequest>("SELECT * FROM FriendRequests WHERE TargetUserId = @0 AND accepted = @1", userId.ToString(), "false");
+            var friendRequests = _database.Query<UmbBook.pocos.FriendRequest>("SELECT * FROM FriendRequests WHERE TargetUserId = @0 AND accepted = @1", userId.ToString(), "false");
 
             FriendRequestsViewModel incomcingFriendRequests = new FriendRequestsViewModel();
-            var memberService = ApplicationContext.Services.MemberService;
 
             //let's get the imember objects for each and store it in the 
             foreach (var item in friendRequests)
             {
-                incomcingFriendRequests.friendRequests.Add(memberService.GetById(item.RequestingUserId));
+                incomcingFriendRequests.friendRequests.Add(_memberService.GetById(item.RequestingUserId));
             }
-
             return PartialView("IncomingFriendRequests", incomcingFriendRequests);
 
         }
@@ -79,10 +95,7 @@ namespace UmbBook.Controllers
                 return RedirectToCurrentUmbracoUrl();
             }
 
-            //get the requesting friends id
-            var memberService = ApplicationContext.Services.MemberService;
-
-            var browsingUser = memberService.GetByUsername(User.Identity.Name);
+            var browsingUser = _memberService.GetByUsername(User.Identity.Name);
 
             //lets see if the requesting friend is the same as the target
             if (pocoToInsert.TargetUserId == browsingUser.Id)
@@ -94,14 +107,10 @@ namespace UmbBook.Controllers
 
             pocoToInsert.RequestingUserId = browsingUser.Id;
 
-            //fetch a database
-            var database = ApplicationContext.DatabaseContext.Database;
-
-
             //remember to set this as false, dunno
             pocoToInsert.Accepted = false;
 
-            database.Insert(pocoToInsert);
+            _database.Insert(pocoToInsert);
 
 
             TempData["Status"] = "Friend request sent";
@@ -114,26 +123,19 @@ namespace UmbBook.Controllers
 
         public ActionResult AcceptFriend(int userId)
         {
+            //updating the SQL database
 
-            var myHelper = new MyHelper();
-
-            var database = ApplicationContext.DatabaseContext.Database;
-
-            database.Execute("UPDATE FriendRequests set accepted = @0 WHERE targetUserId = @1 AND requestingUserId = @2", "true", myHelper.getBrowsingUserId(), userId);
+            _database.Execute("UPDATE FriendRequests set accepted = @0 WHERE targetUserId = @1 AND requestingUserId = @2", "true", _myHelper.getBrowsingUserId(), userId);
 
             return Redirect("/members-wall/");
         }
 
-       
+
 
         //this one works fine
         public ActionResult flushtable()
         {
-            var database = ApplicationContext.DatabaseContext.Database;
-
-            database.Execute("DELETE FROM FriendRequests");
-
-
+            _database.Execute("DELETE FROM FriendRequests");
             return null;
         }
 
