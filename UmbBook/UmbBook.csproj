@@ -327,11 +327,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\MarkDownEditor\package.manifest" />
-    <Content Include="App_Plugins\MarkDownEditor\markdowneditor.controller.js" />
-    <Content Include="App_Plugins\MarkDownEditor\markdowneditor.html" />
     <None Include="App_Plugins\TextboxWithCharacterCount\package.manifest" />
-    <Content Include="App_Plugins\TextboxWithCharacterCount\TextboxWithCharacterCount.js" />
+    <Content Include="App_Plugins\TextboxWithCharacterCount\TextboxWithCharacterCount.controller.js" />
     <Content Include="App_Plugins\TextboxWithCharacterCount\TextboxWithCharacterCount.html" />
     <Content Include="App_Plugins\UmbracoForms\Assets\daterangepicker\daterangepicker.css" />
     <Content Include="App_Plugins\UmbracoForms\Assets\daterangepicker\daterangepicker.js" />
