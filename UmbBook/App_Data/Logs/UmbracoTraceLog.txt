@@ -453,3 +453,61 @@ System.InvalidOperationException: Cannot use ASP.Net Identity with UmbracoMember
  2015-09-15 09:30:11,826 [P7292/D4/T51] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - Login attempt succeeded for username test from IP address ::1
  2015-09-15 09:55:17,530 [P7292/D4/T89] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: taj@mediaworkers.dk, IP Address: ::1
  2015-09-15 10:02:42,647 [P7292/D4/T117] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username taj@mediaworkers.dk from IP address ::1
+ 2015-09-15 10:07:45,574 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2015-09-15 10:07:45,575 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2015-09-15 10:07:45,575 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2015-09-15 10:07:45,575 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2015-09-15 10:07:45,577 [P7292/D4/T117] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2015-09-15 10:07:45,577 [P7292/D4/T105] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2015-09-15 10:07:45,580 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2015-09-15 10:07:45,580 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2015-09-15 10:07:45,580 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2015-09-15 10:07:45,580 [P7292/D4/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2015-09-15 10:07:45,580 [P7292/D4/T93] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2015-09-15 10:07:45,580 [P7292/D4/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2015-09-15 10:08:15,666 [P7292/D4/T65] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Reason: ConfigurationChange
+ 2015-09-15 10:19:32,961 [P7292/D5/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.3.0-RC application starting on MW1008
+ 2015-09-15 10:19:32,985 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2015-09-15 10:19:32,993 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2015-09-15 10:19:33,090 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2015-09-15 10:19:33,099 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 9ms)
+ 2015-09-15 10:19:33,117 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2015-09-15 10:19:33,118 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2015-09-15 10:19:33,119 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2015-09-15 10:19:33,120 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2015-09-15 10:19:33,133 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2015-09-15 10:19:33,135 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+ 2015-09-15 10:19:33,136 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2015-09-15 10:19:33,141 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2015-09-15 10:19:33,170 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2015-09-15 10:19:33,170 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2015-09-15 10:19:33,171 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2015-09-15 10:19:33,172 [P7292/D5/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2015-09-15 10:19:33,658 [P7292/D5/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-15 10:19:33,795 [P7292/D5/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-15 10:19:33,936 [P7292/D5/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2015-09-15 10:19:33,949 [P7292/D5/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2015-09-15 10:19:33,962 [P7292/D5/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2015-09-15 10:19:34,012 [P7292/D5/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2015-09-15 10:19:34,022 [P7292/D5/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1114ms)
+ 2015-09-15 10:19:34,166 [P7292/D5/T12] INFO  Umbraco.Core.ApplicationContext - ApplicationUrl: http://localhost:53281/umbraco (UmbracoModule request)
+ 2015-09-15 10:19:34,382 [P7292/D5/T11] INFO  umbraco.content - Load Xml from file...
+ 2015-09-15 10:19:34,386 [P7292/D5/T11] ERROR umbraco.content - Failed to load Xml from file.
+System.Xml.XmlException: There is no Unicode byte order mark. Cannot switch to Unicode.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   at System.Xml.XmlTextReaderImpl.CheckEncoding(String newEncodingName)
+   at System.Xml.XmlTextReaderImpl.ParseXmlDeclaration(Boolean isTextDecl)
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.Load(Stream inStream)
+   at umbraco.content.LoadXmlFromFile()
+ 2015-09-15 10:19:34,393 [P7292/D5/T11] INFO  umbraco.content - Loading content from database...
+ 2015-09-15 10:19:34,771 [P7292/D5/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2015-09-15 10:19:34,773 [P7292/D5/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2015-09-15 10:19:34,961 [P7292/D5/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2015-09-15 10:19:34,962 [P7292/D5/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 0ms)
+ 2015-09-15 10:19:38,770 [P7292/D5/T8] INFO  umbraco.content - Save Xml to file...
+ 2015-09-15 10:19:38,776 [P7292/D5/T12] INFO  umbraco.content - Saved Xml to file.
+ 2015-09-15 10:20:34,614 [P7292/D5/T17] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2015-09-14 10:20:34

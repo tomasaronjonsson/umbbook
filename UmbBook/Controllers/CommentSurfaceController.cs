@@ -12,6 +12,10 @@ namespace UmbBook.Controllers
     public class CommentSurfaceController : SurfaceController
     {
 
+        
+
+
+
         [HttpPost]
         [ActionName("CommentPost")]
         public ActionResult CommentPost(CommentPostModel model)
