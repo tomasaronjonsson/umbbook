@@ -14,25 +14,19 @@ namespace UmbBook.Controllers
 {
     public class MembersWallController : Umbraco.Web.Mvc.RenderMvcController
     {
-        private readonly IContentService _contentService;
         private readonly IMemberService _memberService;
         private readonly IRelationService _relationService;
-        private readonly Database _database;
         private readonly IMyHelper _myHelper;
 
         //Constructors needed for testability and DI
         public MembersWallController(UmbracoContext umbracoContext,
-            IContentService _contentService,
             IMemberService _memberService,
             IRelationService _relationService,
-            Database _database,
             IMyHelper _myHelper)
             : base(umbracoContext)
         {
-            this._contentService = _contentService;
             this._memberService = _memberService;
             this._relationService = _relationService;
-            this._database = _database;
             this._myHelper = _myHelper;
         }
 

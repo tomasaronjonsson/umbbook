@@ -14,5 +14,7 @@ namespace UmbBook.Interfaces
         FriendRequestsViewModel acceptedFriendsToViewModel();
 
         FeedsListModel getAllFeedByUserId(int userID);
+
+        void StoreProfilePicure(string userName, System.Web.HttpPostedFileBase file);
     }
 }

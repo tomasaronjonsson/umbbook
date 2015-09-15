@@ -26,6 +26,8 @@ namespace UmbBook.MyTools
         private readonly UmbracoContext _umbracoContext;
         private readonly IContentService _contentService;
         private readonly IMemberService _memberService;
+        private readonly IMediaService _mediaService;
+
         private readonly IRelationService _relationService;
         private readonly Database _database;
 
@@ -34,11 +36,13 @@ namespace UmbBook.MyTools
         public MyHelper(UmbracoContext _umbracoContext,
             IContentService _contentService,
             IMemberService _memberService,
+            IMediaService _mediaService,
             IRelationService _relationServices,
             Database _database)
         {
             this._contentService = _contentService;
             this._memberService = _memberService;
+            this._mediaService = _mediaService;
             this._relationService = _relationServices;
             this._database = _database;
             this._umbracoContext = _umbracoContext;
@@ -94,7 +98,7 @@ namespace UmbBook.MyTools
 
 
         /// <summary>
-        /// Returns a FeedsListModel with all the feed of the input userId
+        /// Returns a FeedsListModel with all the feed of the input userId, if the userId is -1, all feed is returned
         /// </summary>
         /// <param name="userID"></param>
         /// <returns></returns>
@@ -104,10 +108,18 @@ namespace UmbBook.MyTools
             //first we need the relation type object
             IRelationType relationTypeToFetch = _relationService.GetRelationTypeByAlias("feedToUser");
 
+            IEnumerable<IRelation> listOfRelationFeedToUser;
 
-            //now we can create a relation list and sort it by createdate
-            var listOfRelationFeedToUser = _relationService.GetAllRelationsByRelationType(relationTypeToFetch.Id).Where(x => x.ChildId == userID);
+            //now we can create a relation list and sort it 
 
+            if (userID >= 0)
+            {
+                listOfRelationFeedToUser = _relationService.GetAllRelationsByRelationType(relationTypeToFetch.Id).Where(x => x.ChildId == userID);
+            }
+            else
+            {
+                listOfRelationFeedToUser = _relationService.GetAllRelationsByRelationType(relationTypeToFetch.Id);
+            }
 
             //now let's create FeedListModel to store our feedlist
             FeedsListModel listOfAllFeeds = new FeedsListModel();
@@ -142,8 +154,32 @@ namespace UmbBook.MyTools
             return listOfAllFeeds;
 
         }
+        /// <summary>
+        /// Store the profilepicture has media and createa a relationship between the user and the picture
+        /// </summary>
+        /// <param name="userName">UserName of the user to store the profile picture to</param>
+        /// <param name="file">HttpPostedFileBase of the profile picture</param>
+        public void StoreProfilePicure(string userName, HttpPostedFileBase file)
+        {
+            //lets store the media
+            var memberToStore = _memberService.GetByUsername(userName);
 
+            //create the media item 
+            var profileImageMediaToSTore = _mediaService.CreateMedia(memberToStore.Name, 1132, "Image");
 
+            //save it to create a medi aId
+            _mediaService.Save(profileImageMediaToSTore);
 
+            //let umbraco take care of the file
+            profileImageMediaToSTore.SetValue("umbracoFile", file);
+
+            //save the whole thing
+            _mediaService.Save(profileImageMediaToSTore);
+
+            //meow we need to create the relation between the member and his profile picture
+            var relationType = _relationService.GetRelationTypeByAlias("memberToProfileImage");
+            var nRelation = new Relation(memberToStore.Id, profileImageMediaToSTore.Id, relationType);
+            _relationService.Save(nRelation);
+        }
     }
 }
