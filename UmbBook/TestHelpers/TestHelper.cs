@@ -14,6 +14,10 @@ using Umbraco.Web.Mvc;
 using Umbraco.Web.Routing;
 using Umbraco.Web.Security;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace UmbBook.TestHelpers
 {
@@ -88,56 +92,48 @@ namespace UmbBook.TestHelpers
         /// <returns>Returns a list of TestContent, a class that implements the IPublishedContent from Umbraco</returns>
         public static List<TestContentModel> getCachedContentAsTestContent(string filePathToUmbracoConfig)
         {
+
+            #region old method of xml serializaation
             //read the cache
             System.Xml.XmlDocument xmldoc = new System.Xml.XmlDocument();
             xmldoc.Load(filePathToUmbracoConfig);
 
 
+
             //find all nodes with a nodeTypesAlias attribute , which should be a site etc.
             var nodes = xmldoc.SelectNodes("//*[@nodeTypeAlias]");
+
 
             //list to store all the content we are going to return
             List<TestContentModel> listOfContent = new List<TestContentModel>();
 
+
             //now let's go over all the nodes and extract some information
             foreach (System.Xml.XmlNode node in nodes)
             {
-                //creata a dictonary to store all the attributes of the node
-                Dictionary<string, string> attributesNameToValue = new Dictionary<string, string>();
+                //we need a new serializer because the name of the root element changes
+                var serializer = new XmlSerializer(typeof(TestContentModel),
+                    new XmlRootAttribute { ElementName = node.Name });
+                //deserialize the node
+                TestContentModel publishedContentToStore = serializer.Deserialize(new XmlNodeReader(node)) as TestContentModel;
 
-                //now we go over all the informormation in the content object and add it to our collection
-                foreach (System.Xml.XmlAttribute nodeAttribute in node.Attributes)
-                {
-                    attributesNameToValue.Add(nodeAttribute.Name, nodeAttribute.Value);
-
-                }
-                //ceate a new TestContent to store our information we have collected
-                TestContentModel publishedContentToStore = new TestContentModel();
-                //was easier to do it this way then to use some mapper
-                publishedContentToStore.Id = int.Parse(attributesNameToValue["id"]);
-                publishedContentToStore.Level = int.Parse(attributesNameToValue["level"]);
-                publishedContentToStore.SortOrder = int.Parse(attributesNameToValue["sortOrder"]);
-                publishedContentToStore.CreateDate = DateTime.Parse(attributesNameToValue["createDate"]);
-                publishedContentToStore.UpdateDate = DateTime.Parse(attributesNameToValue["updateDate"]);
-                publishedContentToStore.Name = attributesNameToValue["nodeName"];
-                publishedContentToStore.UrlName = attributesNameToValue["urlName"];
-                publishedContentToStore.Path = attributesNameToValue["path"];
-                publishedContentToStore.DocumentTypeId = int.Parse(attributesNameToValue["nodeType"]);
-                publishedContentToStore.CreatorName = attributesNameToValue["creatorName"];
-                publishedContentToStore.WriterName = attributesNameToValue["writerName"];
-                publishedContentToStore.WriterId = int.Parse(attributesNameToValue["writerID"]);
-                publishedContentToStore.TemplateId = int.Parse(attributesNameToValue["template"]);
-                publishedContentToStore.DocumentTypeAlias = attributesNameToValue["nodeTypeAlias"];
                 //now we need to extract the custom properties
-
                 foreach (System.Xml.XmlNode customProperty in node.ChildNodes)
                 {
                     publishedContentToStore[customProperty.Name] = customProperty.InnerText;
                 }
 
                 //add the site to the list
-                listOfContent.Add(publishedContentToStore);
+                if (publishedContentToStore != null)
+                {
+                    listOfContent.Add(publishedContentToStore);
+                }
+
             }
+            #endregion
+
+
+
 
             return listOfContent;
         }

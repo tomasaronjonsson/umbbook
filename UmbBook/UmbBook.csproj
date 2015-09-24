@@ -327,7 +327,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CustomGrid\editor.controller.js" />
+    <Content Include="App_Plugins\CustomGrid\package.manifest" />
+    <Content Include="App_Plugins\CustomGrid\editor.cshtml" />
     <None Include="App_Plugins\TextboxWithCharacterCount\package.manifest" />
+    <Content Include="App_Plugins\CustomGrid\editor.html" />
     <Content Include="App_Plugins\TextboxWithCharacterCount\TextboxWithCharacterCount.controller.js" />
     <Content Include="App_Plugins\TextboxWithCharacterCount\TextboxWithCharacterCount.html" />
     <Content Include="App_Plugins\UmbracoForms\Assets\daterangepicker\daterangepicker.css" />
